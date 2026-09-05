@@ -1,0 +1,120 @@
+/* =========================
+   Larger Screen Styles
+   ========================= */
+
+@media screen and (min-width: 768px) {
+
+    /* Header */
+
+    header {
+        padding: 1.25rem 2rem;
+    }
+
+    header img {
+        width: 70px;
+        height: 70px;
+    }
+
+    header span {
+        font-size: 1.4rem;
+    }
+
+
+    /* Hide hamburger */
+
+    #menu-button {
+        display: none;
+    }
+
+
+    /* Navigation */
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav a {
+        border-bottom: none;
+        padding: 1rem 2rem;
+        transition: background-color 0.2s ease;
+    }
+
+
+    /* Main */
+
+    main {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+
+    /* About Section */
+
+    .about-content {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .about-content > div {
+        flex: 1;
+    }
+
+    .about-content img {
+        width: 280px;
+        flex-shrink: 0;
+    }
+
+    .about-section h2 {
+    margin-bottom: 0.5rem;
+}
+
+.about-content {
+    gap: 1rem;
+}
+
+.about-content p:first-child {
+    margin-top: 0;
+}
+
+    /* Course Buttons */
+
+    .course-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .course-buttons button {
+        flex: 1;
+        max-width: 200px;
+    }
+
+
+    /* Course Cards */
+
+    #course-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   Extra Large Screens
+   ========================= */
+
+@media screen and (min-width: 1000px) {
+
+    #course-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}

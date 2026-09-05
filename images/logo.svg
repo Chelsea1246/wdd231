@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+  <title id="title">WDD231 Web Development Logo</title>
+  <desc id="desc">A dark navy and orange logo for WDD231.</desc>
+  <rect width="200" height="200" rx="28" fill="#1f2937"/>
+  <circle cx="100" cy="78" r="58" fill="#d97706"/>
+  <text x="100" y="73" text-anchor="middle" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#fff">WDD</text>
+  <text x="100" y="105" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#1f2937">231</text>
+  <text x="100" y="143" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#fff">&lt;/&gt;</text>
+  <text x="100" y="168" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1" fill="#fff">WEB DEVELOPMENT</text>
+</svg>

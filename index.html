@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD231 | Course Home Page</title>
+
+    <meta
+        name = "description"
+        content = "This is the home page for the WDD213 course. It contains information about the course, assignments, and resources for students."
+    >
+
+    <meta name="author" content="Chelsea Afriyie Opoku">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com" crossorigin>
+    
+    <link
+        href="https://fonts.googleaapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+    
+     <header>
+        <div class="header-content">
+
+            <img src="images/logo.svg" alt="WDD231 logo">
+
+            <span>Chelsea Afriyie Opoku</span>
+
+            <button id="menu-button" aria-label="Open navigation menu">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+    <nav id="navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">Chamber</a>
+        <a href="#">Final</a>
+    </nav>
+
+    <main>
+
+        <h1>Home</h1>
+
+        <section class="about-section">
+            <h2>About Me</h2>
+
+            <div class="about-content">
+
+                <div>
+                    <p>
+                        Welcome to my WDD231 course home page. My name is
+                        Chelsea Afriyie Opoku, and I am studying Software
+                        Development.
+                    </p>
+
+                    <p>
+                        This page showcases my coursework and progress
+                        throughout the Web and Computer Programming
+                        certificate.
+                    </p>
+                </div>
+
+                <img
+                    src="images/profile.jpg"
+                    alt="Chelsea Afriyie Opoku"
+                >
+
+            </div>
+        </section>
+
+        <section class="certificate-section">
+
+            <h2>Web and Computer Programming Certificate</h2>
+
+            <div class="course-buttons">
+                <button id="all-courses">All Courses</button>
+                <button id="wdd-courses">WDD Courses</button>
+                <button id="cse-courses">CSE Courses</button>
+            </div>
+
+            <div id="course-container"></div>
+
+            <p id="total-credits"></p>
+
+        </section>
+
+        <section class="course-info">
+
+            <h2>Course Information</h2>
+
+            <p>
+                The Web and Computer Programming certificate develops
+                practical skills in programming, web development, and
+                computer science.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="social-links">
+
+            <a
+                href="https://github.com/Chelsea1246"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/chelsea-opoku-49a434253?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+
+        </div>
+
+        <p>
+            &copy;
+            <span id="current-year"></span>
+            Chelsea Afriyie Opoku |
+            Zambia
+        </p>
+
+        <p id="lastModified"></p>
+
+    </footer>
+
+</body>
+</html>

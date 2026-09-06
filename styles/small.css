@@ -93,10 +93,14 @@ nav a {
     border-bottom: 1px solid #374151;
 }
 
-nav a:hover,
-nav a.active {
+    nav a:hover {
     background-color: #d97706;
 }
+
+nav a.active {
+    background-color: #374151;
+}
+
 
 
 /* =========================

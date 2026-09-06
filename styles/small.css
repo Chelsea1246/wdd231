@@ -159,10 +159,6 @@ section {
     margin-bottom: 0.5rem;
 }
 
-.about-content {
-    gap: 1rem;
-}
-
 .about-content p:first-child {
     margin-top: 0;
 }

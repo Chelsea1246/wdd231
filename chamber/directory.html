@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accra Chamber of Commerce | Business Directory</title>
+
+    <meta
+        name="description"
+        content="Explore businesses and organizations that are members of the Accra Chamber of Commerce in Ghana."
+    >
+
+    <meta name="author" content="Chelsea Afriyie Opoku">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/larger.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="site-header">
+
+            <a href="directory.html" class="logo-link">
+                <img
+                    src="images/logo.jpg"
+                    alt="Accra Chamber of Commerce logo"
+                >
+            </a>
+
+            <div class="site-title">
+                <h2>Accra Chamber of Commerce</h2>
+                <p>Connecting Businesses, Building Accra</p>
+            </div>
+
+            <button
+                id="menu-button"
+                aria-label="Open navigation menu"
+            >
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav id="navigation">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="discover.html">Discover</a>
+            </li>
+
+            <li>
+                <a href="directory.html" class="active">Directory</a>
+            </li>
+
+            <li>
+                <a href="join.html">Join</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <h1>Accra Chamber of Commerce</h1>
+
+        <section class="directory-section">
+
+            <h2>Business Directory</h2>
+
+            <div class="view-buttons">
+                <button id="grid" type="button">
+                    Grid
+                </button>
+
+                <button id="list" type="button">
+                    List
+                </button>
+            </div>
+
+            <div id="members" class="directory-grid">
+                <!-- Business members will be loaded here using JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="contact-information">
+                <h2>Accra Chamber of Commerce</h2>
+                <p>Accra, Ghana</p>
+                <p>Email: info@accrachamber.org</p>
+                <p>Phone: +233 20 000 0000</p>
+            </div>
+
+            <div class="development-information">
+                <p>
+                    &copy; <span id="current-year"></span>
+                    Accra Chamber of Commerce
+                </p>
+
+                <p>
+                    Chelsea Afriyie Opoku | WDD 231
+                </p>
+
+                <p>
+                    Last Modified:
+                    <span id="last-modified"></span>
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/directory.js"></script>
+
+</body>
+</html>
+```

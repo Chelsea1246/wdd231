@@ -1,0 +1,244 @@
+/* ==============================
+   GENERAL STYLES
+   ============================== */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f3ee;
+    color: #222222;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: #6b1f2b;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+header {
+    background-color: #6b1f2b;
+    color: white;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.logo-link img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.site-title {
+    flex: 1;
+}
+
+.site-title h2 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.site-title p {
+    margin: 0.2rem 0 0;
+    font-size: 0.85rem;
+}
+
+
+/* ==============================
+   MOBILE MENU BUTTON
+   ============================== */
+
+#menu-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+/* ==============================
+   NAVIGATION
+   ============================== */
+
+nav {
+    background-color: #3d151c;
+}
+
+nav ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav.open ul {
+    display: block;
+}
+
+nav li {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav a {
+    display: block;
+    padding: 0.9rem 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #a66a3f;
+}
+
+
+/* ==============================
+   MAIN
+   ============================== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+}
+
+main > h1 {
+    color: #6b1f2b;
+    font-size: 1.8rem;
+}
+
+.directory-section h2 {
+    margin-top: 1.5rem;
+}
+
+
+/* ==============================
+   VIEW BUTTONS
+   ============================== */
+
+.view-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.view-buttons button {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid #6b1f2b;
+    background-color: white;
+    color: #6b1f2b;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.view-buttons button:hover {
+    background-color: #6b1f2b;
+    color: white;
+}
+
+
+/* ==============================
+   DIRECTORY GRID
+   ============================== */
+
+.directory-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+
+/* ==============================
+   MEMBER CARDS
+   ============================== */
+
+.member-card {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.member-card img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.member-card h3 {
+    color: #6b1f2b;
+    margin-top: 0;
+}
+
+.member-card p {
+    margin: 0.4rem 0;
+}
+
+
+/* ==============================
+   LIST VIEW
+   ============================== */
+
+.directory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.directory-list .member-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #cccccc;
+}
+
+.directory-list .member-card img {
+    display: none;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    background-color: #3d151c;
+    color: white;
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer h2 {
+    margin-top: 0;
+}
+
+footer p {
+    margin: 0.4rem 0;
+}
+
+footer a {
+    color: white;
+}

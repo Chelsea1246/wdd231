@@ -1,0 +1,67 @@
+{
+    "members": [
+        {
+            "name": "Teyram Luxury",
+            "address": "East Legon, Accra, Ghana",
+            "phone": "+233 20 123 4567",
+            "website": "https://www.teyramluxury.com",
+            "image": "teyram_luxury.jpg",
+            "membershipLevel": 3,
+            "description": "A premium African luxury fashion house celebrating African heritage, artistry, and contemporary elegance."
+        },
+        {
+            "name": "Accra Business Hub",
+            "address": "Osu, Accra, Ghana",
+            "phone": "+233 24 234 5678",
+            "website": "https://example.com",
+            "image": "accra_business_hub.jpg",
+            "membershipLevel": 2,
+            "description": "A business support organization providing networking and professional development opportunities."
+        },
+        {
+            "name": "Golden Coast Foods",
+            "address": "Cantonments, Accra, Ghana",
+            "phone": "+233 55 345 6789",
+            "website": "https://example.com",
+            "image": "golden_coast_foods.jpg",
+            "membershipLevel": 3,
+            "description": "A local food company providing quality Ghanaian food products and catering services."
+        },
+        {
+            "name": "Heritage Designs Ghana",
+            "address": "Labone, Accra, Ghana",
+            "phone": "+233 27 456 7890",
+            "website": "https://example.com",
+            "image": "heritage_designs_ghana.jpg",
+            "membershipLevel": 2,
+            "description": "A creative design company specializing in contemporary African-inspired products."
+        },
+        {
+            "name": "Accra Digital Solutions",
+            "address": "Airport Residential Area, Accra, Ghana",
+            "phone": "+233 50 567 8901",
+            "website": "https://example.com",
+            "image": "accra_digital_solutions.jpg",
+            "membershipLevel": 3,
+            "description": "A technology company providing digital solutions and web development services to businesses."
+        },
+        {
+            "name": "Green Ghana Enterprises",
+            "address": "Dzorwulu, Accra, Ghana",
+            "phone": "+233 26 678 9012",
+            "website": "https://example.com",
+            "image": "green_ghana_enterprises.jpg",
+            "membershipLevel": 1,
+            "description": "A locally focused business promoting sustainable products and environmentally responsible practices."
+        },
+        {
+            "name": "Creative Accra Media",
+            "address": "Labadi, Accra, Ghana",
+            "phone": "+233 54 789 0123",
+            "website": "https://example.com",
+            "image": "creative_accra_media.jpg",
+            "membershipLevel": 1,
+            "description": "A media and creative agency helping businesses build strong brands and digital presence."
+        }
+    ]
+}

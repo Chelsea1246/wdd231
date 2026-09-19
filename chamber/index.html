@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accra Chamber of Commerce | Home</title>
+
+    <meta
+        name="description"
+        content="Explore businesses and organizations that are members of the Accra Chamber of Commerce in Ghana."
+    >
+
+    <meta name="author" content="Chelsea Afriyie Opoku">
+
+     <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Accra Chamber Directory | Business Directory">
+    <meta
+        property="og:description"
+        content="Explore businesses and organizations in the Accra Chamber of Commerce directory in Ghana."
+    >
+    <meta
+        property="og:image"
+        content="https://chelsea1246.github.io/wdd231/chamber/images/logo.jpg"
+    >
+    <meta
+        property="og:url"
+        content="https://chelsea1246.github.io/wdd231/chamber/directory.html"
+    >
+    <meta property="og:type" content="website">
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+     <!-- JAVASCRIPT -->
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="site-header">
+
+            <a href="directory.html" class="logo-link">
+                <img
+                    src="images/logo.jpg"
+                    alt="Accra Chamber of Commerce logo"
+                >
+            </a>
+
+            <div class="site-title">
+                <h2>Accra Chamber of Commerce</h2>
+                <p>Connecting Businesses, Building Accra</p>
+            </div>
+
+            <button
+                id="menu-button"
+                aria-label="Open navigation menu"
+            >
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav id="navigation">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="discover.html">Discover</a>
+            </li>
+
+            <li>
+                <a href="directory.html" class="active">Directory</a>
+            </li>
+
+            <li>
+                <a href="join.html">Join</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+        <h1>Welcome to the Accra Chamber of Commerce</h1>
+
+        <main>
+    <section class="hero">
+        <img src="images/hero_image.jpg" alt="Accra city skyline">
+        
+        <div class="hero-content">
+            <h1>Growing Business. Building Community.</h1>
+            <p>
+                Connecting businesses, creating opportunities, and strengthening
+                the Accra business community.
+            </p>
+            <a href="join.html" class="cta-button">Join the Chamber</a>
+        </div>
+    </section>
+
+    <section class="events">
+    <h2>Current Events</h2>
+
+    <div class="event-grid">
+        <article class="event-card">
+            <h3>Accra Business Networking Mixer</h3>
+            <p class="event-date">September 24, 2026</p>
+            <p>
+                Connect with local entrepreneurs, business owners, and
+                professionals while building valuable business relationships
+                across Accra.
+            </p>
+            <a href="#">Learn More</a>
+        </article>
+
+        <article class="event-card">
+            <h3>Small Business Growth Workshop</h3>
+            <p class="event-date">September 30, 2026</p>
+            <p>
+                Learn practical strategies for growing your business,
+                improving customer engagement, and creating sustainable
+                opportunities in today's market.
+            </p>
+            <a href="#">Learn More</a>
+        </article>
+    </div>
+</section>
+
+    <section class="weather">
+    <h2>Accra Weather</h2>
+
+    <div class="current-weather">
+        <h3>Current Weather</h3>
+        <p id="current-temperature">--°C</p>
+        <p id="weather-description">Loading weather...</p>
+    </div>
+
+    <div class="forecast">
+        <h3>3-Day Forecast</h3>
+
+        <div id="forecast-container">
+            <div class="forecast-day">
+                <h4>Day 1</h4>
+                <p>--°C</p>
+            </div>
+
+            <div class="forecast-day">
+                <h4>Day 2</h4>
+                <p>--°C</p>
+            </div>
+
+            <div class="forecast-day">
+                <h4>Day 3</h4>
+                <p>--°C</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="spotlights">
+    <h2>Business Spotlights</h2>
+
+    <div id="spotlight-container">
+        <p>Loading business spotlights...</p>
+    </div>
+</section>
+</main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="contact-information">
+                <h2>Accra Chamber of Commerce</h2>
+                <p>Accra, Ghana</p>
+                <p>Email: info@accrachamber.org</p>
+                <p>Phone: +233 20 000 0000</p>
+            </div>
+
+            <div class="development-information">
+                <p>
+                    &copy; <span id="current-year"></span>
+                    Accra Chamber of Commerce
+                </p>
+
+                <p>
+                    Chelsea Afriyie Opoku | WDD 231
+                </p>
+
+                <p>
+                    Last Modified:
+                    <span id="last-modified"></span>
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

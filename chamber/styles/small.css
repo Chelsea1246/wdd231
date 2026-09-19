@@ -242,3 +242,164 @@ footer p {
 footer a {
     color: white;
 }
+
+/* ==============================
+   HOME PAGE
+   ============================== */
+
+/* Hero */
+
+.hero {
+    position: relative;
+    margin: 0 auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+}
+
+.hero-content h1 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.hero-content p {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #6b1f2b;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* Home Sections */
+
+.events,
+.weather,
+.spotlights {
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.events h2,
+.weather h2,
+.spotlights h2 {
+    color: #6b1f2b;
+    margin-bottom: 1.5rem;
+}
+
+/* Events */
+
+.event-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.event-card {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.event-card h3 {
+    color: #6b1f2b;
+    margin-top: 0;
+}
+
+.event-date {
+    font-weight: bold;
+}
+
+/* Weather */
+
+.current-weather,
+.forecast {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.current-weather h3,
+.forecast h3 {
+    color: #6b1f2b;
+    margin-top: 0;
+}
+
+#current-temperature {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#forecast-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.forecast-day {
+    background-color: #f7f3ee;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.forecast-day h4 {
+    margin-top: 0;
+}
+
+/* Business Spotlights */
+
+#spotlight-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.spotlight-card img {
+    width: 120px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.spotlight-card h3 {
+    color: #6b1f2b;
+    text-align: center;
+    margin-top: 0;
+}
+
+.spotlight-card p {
+    margin: 0.5rem 0;
+}
+
+.spotlight-card a {
+    font-weight: bold;
+}

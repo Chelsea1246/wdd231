@@ -4,6 +4,8 @@
 
 @media only screen and (min-width: 32rem) {
 
+    /* Navigation */
+
     #menu-button {
         display: none;
     }
@@ -21,27 +23,93 @@
         padding: 1rem 1.5rem;
     }
 
-    .directory-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    /* Header */
 
     .site-title h2 {
         font-size: 1.6rem;
     }
 
+    /* Directory */
+
+    .directory-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     main > h1 {
         font-size: 2.2rem;
+    }
+
+    /* Home Page */
+
+    .events,
+    .weather,
+    .spotlights {
+        padding: 2rem;
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #forecast-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #spotlight-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 
+/* ==============================
+   LARGE DESKTOP
+   ============================== */
+
 @media only screen and (min-width: 60rem) {
+
+    /* Main */
+
+    main {
+        padding: 2rem;
+    }
+
+    /* Directory */
 
     .directory-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    main {
-        padding: 2rem;
+    /* Home Page */
+
+    .events,
+    .weather,
+    .spotlights {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .weather {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .weather h2 {
+        grid-column: 1 / -1;
+        margin-bottom: 0;
+    }
+
+    .current-weather,
+    .forecast {
+        margin-bottom: 0;
+    }
+
+    #spotlight-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

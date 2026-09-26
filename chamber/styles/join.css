@@ -1,0 +1,272 @@
+/* =========================================
+JOIN PAGE
+========================================= */
+
+.join-main {
+max-width: 1200px;
+margin: 0 auto;
+padding: 2rem 1rem;
+}
+
+/* =========================================
+PAGE INTRODUCTION
+========================================= */
+
+.join-heading {
+text-align: center;
+margin-bottom: 2rem;
+}
+
+.join-heading h1 {
+color: #6b1f2b;
+margin-bottom: 0.75rem;
+}
+
+.join-heading p {
+max-width: 700px;
+margin: 0 auto;
+line-height: 1.7;
+}
+
+/* =========================================
+FORM AND MEMBERSHIP LAYOUT
+========================================= */
+
+.join-layout {
+display: grid;
+gap: 2rem;
+}
+
+.application-section,
+.membership-section {
+background: #f7f3ee;
+padding: 1.5rem;
+border-radius: 12px;
+}
+
+.application-section h2,
+.membership-section h2 {
+color: #6b1f2b;
+margin-top: 0;
+}
+
+/* =========================================
+FORM
+========================================= */
+
+.membership-form {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.membership-form > label {
+display: flex;
+flex-direction: column;
+gap: 0.4rem;
+font-weight: 600;
+}
+
+.membership-form input[type="text"],
+.membership-form input[type="email"],
+.membership-form input[type="tel"],
+.membership-form textarea {
+width: 100%;
+box-sizing: border-box;
+padding: 0.8rem;
+border: 1px solid #999;
+border-radius: 6px;
+font: inherit;
+background-color: #ffffff;
+}
+
+.membership-form input:focus,
+.membership-form textarea:focus {
+outline: 3px solid rgba(107, 31, 43, 0.25);
+border-color: #6b1f2b;
+}
+
+/* =========================================
+MEMBERSHIP OPTIONS
+========================================= */
+
+.membership-form fieldset {
+border: 1px solid #999;
+border-radius: 8px;
+padding: 1rem;
+}
+
+.membership-form legend {
+font-weight: 700;
+padding: 0 0.5rem;
+}
+
+.membership-form fieldset label {
+display: block;
+margin: 0.75rem 0;
+font-weight: 500;
+}
+
+.membership-form input[type="radio"] {
+margin-right: 0.5rem;
+}
+
+/* =========================================
+SUBMIT BUTTON
+========================================= */
+
+.submit-button {
+border: none;
+border-radius: 6px;
+padding: 0.9rem 1rem;
+background-color: #6b1f2b;
+color: #ffffff;
+font: inherit;
+font-weight: 700;
+cursor: pointer;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+background-color: #4e151f;
+}
+
+/* =========================================
+MEMBERSHIP CARDS
+========================================= */
+
+.membership-cards {
+display: grid;
+gap: 1rem;
+}
+
+.membership-card {
+padding: 1.5rem;
+border: 1px solid #d4c8bc;
+border-radius: 10px;
+background-color: #ffffff;
+box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+
+animation: cardReveal 0.8s ease both;
+
+
+}
+
+.membership-card:nth-child(2) {
+animation-delay: 0.15s;
+}
+
+.membership-card:nth-child(3) {
+animation-delay: 0.3s;
+}
+
+.membership-card:nth-child(4) {
+animation-delay: 0.45s;
+}
+
+.membership-card h3 {
+color: #6b1f2b;
+margin-top: 0;
+}
+
+.membership-card p {
+line-height: 1.6;
+}
+
+/* =========================================
+LEARN MORE BUTTON
+========================================= */
+
+.modal-button {
+border: none;
+background: transparent;
+color: #6b1f2b;
+text-decoration: underline;
+font: inherit;
+font-weight: 700;
+cursor: pointer;
+padding: 0;
+}
+
+.modal-button:hover,
+.modal-button:focus {
+color: #4e151f;
+}
+
+/* =========================================
+INITIAL CARD ANIMATION
+========================================= */
+
+@keyframes cardReveal {
+
+
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+}
+
+/* =========================================
+MODALS
+========================================= */
+
+dialog {
+width: min(90%, 500px);
+border: none;
+border-radius: 12px;
+padding: 0;
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+dialog::backdrop {
+background-color: rgba(0, 0, 0, 0.55);
+}
+
+.modal-content {
+padding: 2rem;
+}
+
+.modal-content h2 {
+color: #6b1f2b;
+margin-top: 0;
+}
+
+.modal-content li {
+margin-bottom: 0.75rem;
+}
+
+.close-modal {
+margin-top: 1rem;
+border: none;
+border-radius: 6px;
+padding: 0.7rem 1.2rem;
+background-color: #6b1f2b;
+color: #ffffff;
+font: inherit;
+cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+background-color: #4e151f;
+}
+
+/* =========================================
+REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+
+.membership-card {
+    animation: none;
+}
+}

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join | Accra Chamber of Commerce</title>
+
+    <meta name="description"
+        content="Join the Accra Chamber of Commerce and connect with businesses, networking opportunities, training, and promotional opportunities in Accra.">
+
+    <meta name="author" content="Chelsea Afriyie Opoku">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Join | Accra Chamber of Commerce">
+    <meta property="og:description"
+        content="Become a member of the Accra Chamber of Commerce and grow your business network.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chelsea1246.github.io/wdd231/chamber/join.html">
+    <meta property="og:image"
+        content="https://chelsea1246.github.io/wdd231/chamber/images/hero_image.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/join.css">
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+    <header>
+
+        <div class="header-container">
+
+            <a href="index.html" class="logo-link">
+            <img src="images/logo.jpg" alt="Accra Chamber of Commerce logo"
+                    width="100"
+                    height="100">
+            </a>
+
+            <div class="header-text">
+                <h1>Accra Chamber of Commerce</h1>
+                <p>Connecting Businesses, Building Accra</p>
+            </div>
+
+            <button id="menu-button"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+        </div>
+
+        <!-- ==============================
+             NAVIGATION
+        =============================== -->
+        <nav id="navigation">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="discover.html">Discover</a>
+                </li>
+
+                <li>
+                    <a href="directory.html">Directory</a>
+                </li>
+
+                <li>
+                    <a href="join.html" class="active">Join</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN CONTENT
+    =============================== -->
+    <main class="join-main">
+
+        <!-- PAGE INTRO -->
+        <section class="join-heading">
+
+            <h1>Join the Accra Chamber of Commerce</h1>
+
+            <p>
+                Become part of a growing business community and gain access
+                to networking, training, and promotional opportunities.
+            </p>
+
+        </section>
+
+
+        <!-- FORM + MEMBERSHIP OPTIONS -->
+        <div class="join-layout">
+
+            <!-- ==============================
+                 MEMBERSHIP APPLICATION FORM
+            =============================== -->
+            <section class="application-section">
+
+                <h2>Membership Application</h2>
+
+                <form
+                    class="membership-form"
+                    method="get"
+                    action="thankyou.html">
+
+                    <!-- First Name -->
+                    <label for="firstName">
+                        First Name
+                        <input
+                            type="text"
+                            id="firstName"
+                            name="firstName"
+                            title="Enter your first name"
+                            autocomplete="given-name"
+                            required>
+                    </label>
+
+
+                    <!-- Last Name -->
+                    <label for="lastName">
+                        Last Name
+                        <input
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            title="Enter your last name"
+                            autocomplete="family-name"
+                            required>
+                    </label>
+
+
+                    <!-- Organizational Title -->
+                    <label for="organizationTitle">
+                        Organizational Title
+                        <input
+                            type="text"
+                            id="organizationTitle"
+                            name="organizationTitle"
+                            title="Enter your organizational title. Use at least 7 characters and only letters, spaces, or hyphens."
+                            autocomplete="organization-title"
+                            pattern="[A-Za-zÀ-ÿ\s-]{7,}"
+                            required>
+                    </label>
+
+
+                    <!-- Email -->
+                    <label for="email">
+                        Email Address
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            title="Enter a valid email address"
+                            autocomplete="email"
+                            placeholder="example@email.com"
+                            required>
+                    </label>
+
+
+                    <!-- Mobile Phone -->
+                    <label for="phone">
+                        Mobile Phone Number
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            title="Enter your mobile phone number"
+                            autocomplete="tel"
+                            required>
+                    </label>
+
+
+                    <!-- Organization -->
+                    <label for="organization">
+                        Business / Organization Name
+                        <input
+                            type="text"
+                            id="organization"
+                            name="organization"
+                            title="Enter your business or organization name"
+                            autocomplete="organization"
+                            required>
+                    </label>
+
+
+                    <!-- Membership Level -->
+                    <fieldset>
+
+                        <legend>Membership Level</legend>
+
+                        <label for="np">
+                            <input
+                                type="radio"
+                                id="np"
+                                name="membership"
+                                value="np"
+                                required>
+                            NP Membership – No Fee
+                        </label>
+
+                        <label for="bronze">
+                            <input
+                                type="radio"
+                                id="bronze"
+                                name="membership"
+                                value="bronze">
+                            Bronze Membership
+                        </label>
+
+                        <label for="silver">
+                            <input
+                                type="radio"
+                                id="silver"
+                                name="membership"
+                                value="silver">
+                            Silver Membership
+                        </label>
+
+                        <label for="gold">
+                            <input
+                                type="radio"
+                                id="gold"
+                                name="membership"
+                                value="gold">
+                            Gold Membership
+                        </label>
+
+                    </fieldset>
+
+
+                    <!-- Organization Description -->
+                    <label for="description">
+                        Business / Organization Description
+                        <textarea
+                            id="description"
+                            name="description"
+                            title="Describe your business or organization"
+                            rows="6"></textarea>
+                    </label>
+
+
+                    <!-- Hidden Timestamp -->
+                    <input
+                        type="hidden"
+                        id="timestamp"
+                        name="timestamp">
+
+
+                    <!-- Submit -->
+                    <input
+                        type="submit"
+                        value="Submit Membership Application"
+                        class="submit-button">
+
+                </form>
+
+            </section>
+
+
+            <!-- ==============================
+                 MEMBERSHIP LEVELS
+            =============================== -->
+            <section class="membership-section">
+
+                <h2>Membership Levels</h2>
+
+                <div class="membership-cards">
+
+                    <!-- NP MEMBERSHIP -->
+                    <article class="membership-card">
+
+                        <h3>NP Membership</h3>
+
+                        <p>
+                            A no-fee membership designed for nonprofit
+                            organizations and community-focused groups.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="modal-button"
+                            data-modal="np-modal">
+                            Learn More
+                        </button>
+
+                    </article>
+
+
+                    <!-- BRONZE -->
+                    <article class="membership-card">
+
+                        <h3>Bronze Membership</h3>
+
+                        <p>
+                            A flexible membership for small and growing
+                            businesses looking to connect with the
+                            Accra business community.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="modal-button"
+                            data-modal="bronze-modal">
+                            Learn More
+                        </button>
+
+                    </article>
+
+
+                    <!-- SILVER -->
+                    <article class="membership-card">
+
+                        <h3>Silver Membership</h3>
+
+                        <p>
+                            Additional opportunities for businesses seeking
+                            greater visibility, networking, and training.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="modal-button"
+                            data-modal="silver-modal">
+                            Learn More
+                        </button>
+
+                    </article>
+
+
+                    <!-- GOLD -->
+                    <article class="membership-card">
+
+                        <h3>Gold Membership</h3>
+
+                        <p>
+                            Enhanced benefits designed for businesses that
+                            want greater promotional and networking exposure.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="modal-button"
+                            data-modal="gold-modal">
+                            Learn More
+                        </button>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- ==============================
+             NP MODAL
+        =============================== -->
+        <dialog id="np-modal">
+
+            <div class="modal-content">
+
+                <h2>NP Membership Benefits</h2>
+
+                <ul>
+                    <li>No membership fee.</li>
+                    <li>Access to selected chamber resources.</li>
+                    <li>Opportunities to participate in community events.</li>
+                    <li>Networking opportunities with other organizations.</li>
+                </ul>
+
+                <button
+                    type="button"
+                    class="close-modal">
+                    Close
+                </button>
+
+            </div>
+
+        </dialog>
+
+
+        <!-- ==============================
+             BRONZE MODAL
+        =============================== -->
+        <dialog id="bronze-modal">
+
+            <div class="modal-content">
+
+                <h2>Bronze Membership Benefits</h2>
+
+                <ul>
+                    <li>Access to networking events.</li>
+                    <li>Business development opportunities.</li>
+                    <li>Access to selected training programs.</li>
+                    <li>Business listing in the chamber directory.</li>
+                </ul>
+
+                <button
+                    type="button"
+                    class="close-modal">
+                    Close
+                </button>
+
+            </div>
+
+        </dialog>
+
+
+        <!-- ==============================
+             SILVER MODAL
+        =============================== -->
+        <dialog id="silver-modal">
+
+            <div class="modal-content">
+
+                <h2>Silver Membership Benefits</h2>
+
+                <ul>
+                    <li>All Bronze membership benefits.</li>
+                    <li>Additional training opportunities.</li>
+                    <li>Increased business visibility.</li>
+                    <li>Promotional opportunities through chamber activities.</li>
+                </ul>
+
+                <button
+                    type="button"
+                    class="close-modal">
+                    Close
+                </button>
+
+            </div>
+
+        </dialog>
+
+
+        <!-- ==============================
+             GOLD MODAL
+        =============================== -->
+        <dialog id="gold-modal">
+
+            <div class="modal-content">
+
+                <h2>Gold Membership Benefits</h2>
+
+                <ul>
+                    <li>All Silver membership benefits.</li>
+                    <li>Priority networking opportunities.</li>
+                    <li>Enhanced promotional exposure.</li>
+                    <li>Additional opportunities to showcase your business.</li>
+                    <li>Greater access to chamber events and training.</li>
+                </ul>
+
+                <button
+                    type="button"
+                    class="close-modal">
+                    Close
+                </button>
+
+            </div>
+
+        </dialog>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2>Accra Chamber of Commerce</h2>
+                <p>Accra, Ghana</p>
+                <p>Email: info@accrachamber.org</p>
+                <p>Phone: +233 20 000 0000</p>
+            </div>
+
+            <div>
+                <p>
+                    &copy; <span id="currentyear"></span>
+                    Accra Chamber of Commerce
+                </p>
+
+                <p>
+                    Chelsea Afriyie Opoku
+                </p>
+
+                <p>
+                    WDD 231 Chamber Project
+                </p>
+
+                <p>
+                    Last Modified:
+                    <span id="lastModified"></span>
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    =============================== -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+
+</body>
+
+</html>

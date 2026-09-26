@@ -113,3 +113,20 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* ================================
+JOIN PAGE - LARGE SCREEN
+================================ */
+
+@media screen and (min-width: 700px) 
+{
+
+.join-layout {
+    grid-template-columns: 1.5fr 1fr;
+    align-items: start;
+}
+
+.membership-cards {
+    grid-template-columns: 1fr;
+}
+}

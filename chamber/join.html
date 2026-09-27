@@ -18,9 +18,10 @@
     <meta property="og:description"
         content="Become a member of the Accra Chamber of Commerce and grow your business network.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://chelsea1246.github.io/wdd231/chamber/join.html">
+    <meta property="og:url"
+        content="https://chelsea1246.github.io/wdd231/join.html">
     <meta property="og:image"
-        content="https://chelsea1246.github.io/wdd231/chamber/images/hero_image.webp">
+        content="https://chelsea1246.github.io/wdd231/images/hero_image.webp">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico">
@@ -28,6 +29,7 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
@@ -40,25 +42,26 @@
 
 <body>
 
-    <!-- ==============================
-         HEADER
-    =============================== -->
+    <!-- HEADER -->
     <header>
 
         <div class="header-container">
 
             <a href="index.html" class="logo-link">
-            <img src="images/logo.jpg" alt="Accra Chamber of Commerce logo"
+                <img src="images/logo.jpg"
+                    alt="Accra Chamber of Commerce logo"
                     width="100"
                     height="100">
             </a>
 
             <div class="header-text">
-                <h1>Accra Chamber of Commerce</h1>
+                <div class="site-title">Accra Chamber of Commerce</div>
+
                 <p>Connecting Businesses, Building Accra</p>
             </div>
 
             <button id="menu-button"
+                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false">
                 ☰
@@ -66,11 +69,12 @@
 
         </div>
 
-        <!-- ==============================
-             NAVIGATION
-        =============================== -->
+
+        <!-- NAVIGATION -->
         <nav id="navigation">
+
             <ul>
+
                 <li>
                     <a href="index.html">Home</a>
                 </li>
@@ -86,15 +90,15 @@
                 <li>
                     <a href="join.html" class="active">Join</a>
                 </li>
+
             </ul>
+
         </nav>
 
     </header>
 
 
-    <!-- ==============================
-         MAIN CONTENT
-    =============================== -->
+    <!-- MAIN -->
     <main class="join-main">
 
         <!-- PAGE INTRO -->
@@ -110,12 +114,11 @@
         </section>
 
 
-        <!-- FORM + MEMBERSHIP OPTIONS -->
+        <!-- FORM AND MEMBERSHIP LEVELS -->
         <div class="join-layout">
 
-            <!-- ==============================
-                 MEMBERSHIP APPLICATION FORM
-            =============================== -->
+
+            <!-- MEMBERSHIP APPLICATION -->
             <section class="application-section">
 
                 <h2>Membership Application</h2>
@@ -125,9 +128,11 @@
                     method="get"
                     action="thankyou.html">
 
-                    <!-- First Name -->
+
+                    <!-- FIRST NAME -->
                     <label for="firstName">
                         First Name
+
                         <input
                             type="text"
                             id="firstName"
@@ -138,9 +143,10 @@
                     </label>
 
 
-                    <!-- Last Name -->
+                    <!-- LAST NAME -->
                     <label for="lastName">
                         Last Name
+
                         <input
                             type="text"
                             id="lastName"
@@ -151,37 +157,40 @@
                     </label>
 
 
-                    <!-- Organizational Title -->
+                    <!-- ORGANIZATIONAL TITLE -->
                     <label for="organizationTitle">
                         Organizational Title
+
                         <input
                             type="text"
                             id="organizationTitle"
                             name="organizationTitle"
-                            title="Enter your organizational title. Use at least 7 characters and only letters, spaces, or hyphens."
+                            title="Enter your organizational title using at least seven letters, spaces, or hyphens."
                             autocomplete="organization-title"
                             pattern="[A-Za-zÀ-ÿ\s-]{7,}"
                             required>
                     </label>
 
 
-                    <!-- Email -->
+                    <!-- EMAIL -->
                     <label for="email">
                         Email Address
+
                         <input
                             type="email"
                             id="email"
                             name="email"
-                            title="Enter a valid email address"
+                            title="Enter your email address"
                             autocomplete="email"
                             placeholder="example@email.com"
                             required>
                     </label>
 
 
-                    <!-- Mobile Phone -->
+                    <!-- PHONE -->
                     <label for="phone">
                         Mobile Phone Number
+
                         <input
                             type="tel"
                             id="phone"
@@ -192,9 +201,10 @@
                     </label>
 
 
-                    <!-- Organization -->
+                    <!-- ORGANIZATION -->
                     <label for="organization">
                         Business / Organization Name
+
                         <input
                             type="text"
                             id="organization"
@@ -205,70 +215,87 @@
                     </label>
 
 
-                    <!-- Membership Level -->
+                    <!-- MEMBERSHIP LEVEL -->
                     <fieldset>
 
                         <legend>Membership Level</legend>
 
                         <label for="np">
+
                             <input
                                 type="radio"
                                 id="np"
                                 name="membership"
                                 value="np"
                                 required>
-                            NP Membership – No Fee
+
+                            NP Membership - No Fee
+
                         </label>
 
+
                         <label for="bronze">
+
                             <input
                                 type="radio"
                                 id="bronze"
                                 name="membership"
                                 value="bronze">
+
                             Bronze Membership
+
                         </label>
 
+
                         <label for="silver">
+
                             <input
                                 type="radio"
                                 id="silver"
                                 name="membership"
                                 value="silver">
+
                             Silver Membership
+
                         </label>
 
+
                         <label for="gold">
+
                             <input
                                 type="radio"
                                 id="gold"
                                 name="membership"
                                 value="gold">
+
                             Gold Membership
+
                         </label>
 
                     </fieldset>
 
 
-                    <!-- Organization Description -->
+                    <!-- ORGANIZATION DESCRIPTION -->
                     <label for="description">
                         Business / Organization Description
+
                         <textarea
                             id="description"
                             name="description"
                             title="Describe your business or organization"
                             rows="6"></textarea>
+
                     </label>
 
 
-                    <!-- Hidden Timestamp -->
+                    <!-- TIMESTAMP -->
                     <input
                         type="hidden"
                         id="timestamp"
                         name="timestamp">
 
 
-                    <!-- Submit -->
+                    <!-- SUBMIT -->
                     <input
                         type="submit"
                         value="Submit Membership Application"
@@ -279,16 +306,15 @@
             </section>
 
 
-            <!-- ==============================
-                 MEMBERSHIP LEVELS
-            =============================== -->
+            <!-- MEMBERSHIP LEVEL CARDS -->
             <section class="membership-section">
 
                 <h2>Membership Levels</h2>
 
                 <div class="membership-cards">
 
-                    <!-- NP MEMBERSHIP -->
+
+                    <!-- NP -->
                     <article class="membership-card">
 
                         <h3>NP Membership</h3>
@@ -375,9 +401,7 @@
         </div>
 
 
-        <!-- ==============================
-             NP MODAL
-        =============================== -->
+        <!-- NP MODAL -->
         <dialog id="np-modal">
 
             <div class="modal-content">
@@ -387,8 +411,8 @@
                 <ul>
                     <li>No membership fee.</li>
                     <li>Access to selected chamber resources.</li>
-                    <li>Opportunities to participate in community events.</li>
-                    <li>Networking opportunities with other organizations.</li>
+                    <li>Community event opportunities.</li>
+                    <li>Networking with other organizations.</li>
                 </ul>
 
                 <button
@@ -402,9 +426,7 @@
         </dialog>
 
 
-        <!-- ==============================
-             BRONZE MODAL
-        =============================== -->
+        <!-- BRONZE MODAL -->
         <dialog id="bronze-modal">
 
             <div class="modal-content">
@@ -429,9 +451,7 @@
         </dialog>
 
 
-        <!-- ==============================
-             SILVER MODAL
-        =============================== -->
+        <!-- SILVER MODAL -->
         <dialog id="silver-modal">
 
             <div class="modal-content">
@@ -442,7 +462,7 @@
                     <li>All Bronze membership benefits.</li>
                     <li>Additional training opportunities.</li>
                     <li>Increased business visibility.</li>
-                    <li>Promotional opportunities through chamber activities.</li>
+                    <li>Promotional opportunities.</li>
                 </ul>
 
                 <button
@@ -456,9 +476,7 @@
         </dialog>
 
 
-        <!-- ==============================
-             GOLD MODAL
-        =============================== -->
+        <!-- GOLD MODAL -->
         <dialog id="gold-modal">
 
             <div class="modal-content">
@@ -469,7 +487,7 @@
                     <li>All Silver membership benefits.</li>
                     <li>Priority networking opportunities.</li>
                     <li>Enhanced promotional exposure.</li>
-                    <li>Additional opportunities to showcase your business.</li>
+                    <li>Opportunities to showcase your business.</li>
                     <li>Greater access to chamber events and training.</li>
                 </ul>
 
@@ -486,23 +504,29 @@
     </main>
 
 
-    <!-- ==============================
-         FOOTER
-    =============================== -->
+    <!-- FOOTER -->
     <footer>
 
         <div class="footer-content">
 
             <div>
+
                 <h2>Accra Chamber of Commerce</h2>
+
                 <p>Accra, Ghana</p>
+
                 <p>Email: info@accrachamber.org</p>
+
                 <p>Phone: +233 20 000 0000</p>
+
             </div>
 
+
             <div>
+
                 <p>
-                    &copy; <span id="currentyear"></span>
+                    &copy;
+                    <span id="currentyear"></span>
                     Accra Chamber of Commerce
                 </p>
 
@@ -518,6 +542,7 @@
                     Last Modified:
                     <span id="lastModified"></span>
                 </p>
+
             </div>
 
         </div>
@@ -525,11 +550,7 @@
     </footer>
 
 
-    <!-- ==============================
-         JAVASCRIPT
-    =============================== -->
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/date.js" defer></script>
+    <!-- JAVASCRIPT -->
     <script src="scripts/join.js" defer></script>
 
 </body>

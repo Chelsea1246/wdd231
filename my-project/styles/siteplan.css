@@ -1,0 +1,556 @@
+
+/* ==============================
+   BROKEN TO ALTERED FOUNDATION
+   WDD231 SITE PLAN
+   ============================== */
+
+:root {
+    --burgundy: #6B1F2B;
+    --cream: #F7F3EE;
+    --gold: #C9A45C;
+    --white: #FFFFFF;
+    --dark: #2B2526;
+    --light-border: #DED5CC;
+
+    --heading-font: "Playfair Display", Georgia, serif;
+    --body-font: "Poppins", Arial, sans-serif;
+}
+
+/* ==============================
+   RESET
+   ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--dark);
+    font-family: var(--body-font);
+    line-height: 1.7;
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.site-header {
+    background-color: var(--burgundy);
+    border-bottom: 5px solid var(--gold);
+    color: var(--white);
+}
+
+.header-content {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1.5rem;
+}
+
+.brand {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.brand-mark {
+    align-items: center;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    display: flex;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 65px;
+    justify-content: center;
+    width: 65px;
+}
+
+.brand h1 {
+    font-family: var(--heading-font);
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    line-height: 1.2;
+}
+
+.brand p {
+    color: var(--gold);
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    margin-top: 0.25rem;
+    text-transform: uppercase;
+}
+
+/* ==============================
+   INTRO
+   ============================== */
+
+.intro {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--light-border);
+    margin-bottom: 2rem;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.intro p {
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+.eyebrow {
+    color: var(--burgundy);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.intro h2 {
+    color: var(--burgundy);
+    font-family: var(--heading-font);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+/* ==============================
+   MAIN CONTENT
+   ============================== */
+
+main {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-bottom: 3rem;
+}
+
+.plan-section {
+    margin: 0 1rem 2rem;
+}
+
+.plan-section > h2 {
+    border-left: 5px solid var(--gold);
+    color: var(--burgundy);
+    font-family: var(--heading-font);
+    font-size: clamp(1.7rem, 4vw, 2.3rem);
+    margin-bottom: 1.25rem;
+    padding-left: 0.9rem;
+}
+
+.content-card,
+.color-intro,
+.wireframe-intro {
+    background-color: var(--white);
+    border: 1px solid var(--light-border);
+    padding: 1.5rem;
+}
+
+.content-card p {
+    margin-bottom: 1rem;
+}
+
+.content-card p:last-child {
+    margin-bottom: 0;
+}
+
+.content-card ul {
+    margin: 1rem 0 0 1.5rem;
+}
+
+.content-card li {
+    margin-bottom: 0.5rem;
+}
+
+.domain {
+    background-color: var(--cream);
+    border-left: 3px solid var(--gold);
+    padding: 0.8rem 1rem;
+}
+
+/* ==============================
+   SCENARIOS
+   ============================== */
+
+.scenario-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.scenario-card {
+    background-color: var(--white);
+    border: 1px solid var(--light-border);
+    padding: 1.5rem;
+}
+
+.scenario-number {
+    color: var(--gold);
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.scenario-card h3 {
+    color: var(--burgundy);
+    font-family: var(--heading-font);
+    margin-bottom: 0.5rem;
+}
+
+.scenario-card p {
+    margin: 0;
+}
+
+/* ==============================
+   COLOR SCHEME
+   ============================== */
+
+.color-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.color-card {
+    background-color: var(--white);
+    border: 1px solid var(--light-border);
+}
+
+.color-swatch {
+    height: 100px;
+}
+
+.burgundy {
+    background-color: var(--burgundy);
+}
+
+.cream {
+    background-color: var(--cream);
+    border-bottom: 1px solid var(--light-border);
+}
+
+.gold {
+    background-color: var(--gold);
+}
+
+.color-info {
+    padding: 1.25rem;
+}
+
+.color-info h3 {
+    color: var(--burgundy);
+    font-family: var(--heading-font);
+    margin-bottom: 0.5rem;
+}
+
+.color-info p {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+/* ==============================
+   COLOR PREVIEW
+   ============================== */
+
+.color-preview {
+    border: 1px solid var(--light-border);
+    margin-top: 1.5rem;
+}
+
+.color-preview h3 {
+    background-color: var(--cream);
+    color: var(--burgundy);
+    font-family: var(--heading-font);
+    padding: 1rem 1.25rem;
+}
+
+.preview-navigation {
+    background-color: var(--burgundy);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+}
+
+.preview-content {
+    background-color: var(--cream);
+    padding: 2rem;
+    text-align: center;
+}
+
+.preview-content h4 {
+    color: var(--burgundy);
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.preview-content p {
+    margin: 0 auto 1.25rem;
+    max-width: 600px;
+}
+
+.preview-content button {
+    background-color: var(--burgundy);
+    border: 2px solid var(--burgundy);
+    color: var(--white);
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+}
+
+.preview-content button:hover {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--dark);
+}
+
+/* ==============================
+   TYPOGRAPHY
+   ============================== */
+
+.font-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.font-card {
+    background-color: var(--white);
+    border: 1px solid var(--light-border);
+    padding: 1.5rem;
+}
+
+.font-card h3 {
+    color: var(--burgundy);
+    font-size: 1.7rem;
+    margin-bottom: 0.25rem;
+}
+
+.font-role {
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.playfair {
+    font-family: var(--heading-font);
+}
+
+.poppins {
+    font-family: var(--body-font);
+}
+
+.sample {
+    border-top: 1px solid var(--light-border);
+    padding-top: 1rem;
+}
+
+/* ==============================
+   WIREFRAME
+   ============================== */
+
+.wireframe-intro {
+    margin-bottom: 1.5rem;
+}
+
+.important-note {
+    background-color: var(--cream);
+    border-left: 3px solid var(--gold);
+    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+}
+
+.wireframe-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.wireframe-card {
+    background-color: var(--white);
+    border: 1px solid var(--light-border);
+    padding: 1.5rem;
+}
+
+.wireframe-card h3 {
+    color: var(--burgundy);
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.wireframe {
+    border: 2px solid var(--dark);
+    color: var(--dark);
+    font-family: Arial, sans-serif;
+    padding: 0.5rem;
+}
+
+.wf-header {
+    align-items: center;
+    border: 1px solid var(--dark);
+    display: flex;
+    font-size: 0.7rem;
+    font-weight: 700;
+    justify-content: space-between;
+    min-height: 45px;
+    padding: 0.5rem;
+}
+
+.wf-hero {
+    align-items: center;
+    border: 1px solid var(--dark);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+    min-height: 180px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.wf-hero strong {
+    font-size: 1.1rem;
+}
+
+.wf-section {
+    align-items: center;
+    border: 1px solid var(--dark);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+    min-height: 100px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.wf-box {
+    align-items: center;
+    border: 1px dashed var(--dark);
+    display: flex;
+    justify-content: center;
+    min-height: 55px;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.wf-footer {
+    border: 1px solid var(--dark);
+    margin-top: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.wf-columns {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 0.5rem;
+}
+
+.wf-columns .wf-box {
+    min-height: 90px;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.site-footer {
+    background-color: var(--burgundy);
+    border-top: 5px solid var(--gold);
+    color: var(--white);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.site-footer p {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+}
+
+/* ==============================
+   TABLET
+   ============================== */
+
+@media screen and (min-width: 600px) {
+    .scenario-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .color-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .font-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wireframe-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==============================
+   DESKTOP
+   ============================== */
+
+@media screen and (min-width: 900px) {
+    .header-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .intro {
+        padding: 5rem 1.5rem;
+    }
+
+    .plan-section {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .content-card,
+    .color-intro,
+    .wireframe-intro {
+        padding: 2rem;
+    }
+
+    .wireframe-card {
+        padding: 2rem;
+    }
+}
+
+
+.wireframe-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.wireframe-card {
+    text-align: center;
+}
+
+.wireframe-card img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid var(--light-border);
+}
+
+@media screen and (min-width: 700px) {
+    .wireframe-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

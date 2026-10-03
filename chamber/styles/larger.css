@@ -130,3 +130,128 @@ JOIN PAGE - LARGE SCREEN
     grid-template-columns: 1fr;
 }
 }
+
+/* ==============================
+   DISCOVER PAGE
+   MEDIUM SCREEN
+   641px - 1024px
+   ============================== */
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+
+    .discover-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "one two"
+            "three three"
+            "four five"
+            "six seven"
+            "eight eight";
+        gap: 1.5rem;
+    }
+
+    .card-1 {
+        grid-area: one;
+    }
+
+    .card-2 {
+        grid-area: two;
+    }
+
+    .card-3 {
+        grid-area: three;
+    }
+
+    .card-4 {
+        grid-area: four;
+    }
+
+    .card-5 {
+        grid-area: five;
+    }
+
+    .card-6 {
+        grid-area: six;
+    }
+
+    .card-7 {
+        grid-area: seven;
+    }
+
+    .card-8 {
+        grid-area: eight;
+    }
+
+    .discover-card img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .discover-card:hover img {
+        transform: scale(1.05);
+        filter: brightness(0.85);
+    }
+}
+
+
+/* ==============================
+   DISCOVER PAGE
+   LARGE SCREEN
+   1025px AND ABOVE
+   ============================== */
+
+@media screen and (min-width: 1025px) {
+
+    .discover-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-areas:
+            "one one two three"
+            "four five five three"
+            "four six seven eight";
+
+        gap: 1.5rem;
+    }
+
+    .card-1 {
+        grid-area: one;
+    }
+
+    .card-2 {
+        grid-area: two;
+    }
+
+    .card-3 {
+        grid-area: three;
+    }
+
+    .card-4 {
+        grid-area: four;
+    }
+
+    .card-5 {
+        grid-area: five;
+    }
+
+    .card-6 {
+        grid-area: six;
+    }
+
+    .card-7 {
+        grid-area: seven;
+    }
+
+    .card-8 {
+        grid-area: eight;
+    }
+
+    .discover-card img {
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .discover-card:hover img {
+        transform: scale(1.05);
+        filter: brightness(0.85);
+    }
+}

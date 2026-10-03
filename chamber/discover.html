@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Discover Accra | Accra Chamber of Commerce</title>
+
+    <meta
+        name="description"
+        content="Discover places, attractions, culture, history, and experiences in Accra, Ghana."
+    >
+
+    <meta name="author" content="Chelsea Afriyie Opoku">
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+        property="og:title"
+        content="Discover Accra | Accra Chamber of Commerce"
+    >
+
+    <meta
+        property="og:description"
+        content="Explore places, attractions, culture, history, and experiences in Accra, Ghana."
+    >
+
+    <meta
+        property="og:image"
+        content="https://chelsea1246.github.io/wdd231/chamber/images/logo.jpg"
+    >
+
+    <meta
+        property="og:url"
+        content="https://chelsea1246.github.io/wdd231/chamber/discover.html"
+    >
+
+    <meta property="og:type" content="website">
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+
+    <!-- JAVASCRIPT -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="site-header">
+
+            <a href="index.html" class="logo-link">
+                <img
+                    src="images/logo.jpg"
+                    alt="Accra Chamber of Commerce logo"
+                >
+            </a>
+
+            <div class="site-title">
+                <h2>Accra Chamber of Commerce</h2>
+                <p>Connecting Businesses, Building Accra</p>
+            </div>
+
+            <button
+                id="menu-button"
+                aria-label="Open navigation menu"
+            >
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav id="navigation">
+        <ul>
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="discover.html" class="active">Discover</a>
+            </li>
+
+            <li>
+                <a href="directory.html">Directory</a>
+            </li>
+
+            <li>
+                <a href="join.html">Join</a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <section class="discover-heading">
+
+            <h1>Discover Accra</h1>
+
+            <p>
+                Explore the history, culture, natural beauty, and attractions
+                that make Accra a vibrant destination for businesses,
+                residents, and visitors.
+            </p>
+
+        </section>
+
+
+        <!-- VISITOR MESSAGE -->
+        <section
+            id="visit-message"
+            class="visit-message"
+            aria-live="polite"
+        ></section>
+
+
+        <!-- DISCOVER CARDS -->
+        <section
+            id="discover-grid"
+            class="discover-grid"
+        >
+            <!-- Discover cards will be generated with JavaScript -->
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="contact-information">
+
+                <h2>Accra Chamber of Commerce</h2>
+
+                <p>Accra, Ghana</p>
+
+                <p>Email: info@accrachamber.org</p>
+
+                <p>Phone: +233 20 000 0000</p>
+
+            </div>
+
+
+            <div class="development-information">
+
+                <p>
+                    &copy; <span id="current-year"></span>
+                    Accra Chamber of Commerce
+                </p>
+
+                <p>
+                    Chelsea Afriyie Opoku | WDD 231
+                </p>
+
+                <p>
+                    Last Modified:
+                    <span id="last-modified"></span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- JAVASCRIPT -->
+<script src="scripts/date.js" defer></script>
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/discover.js" type="module"></script>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+[
+    {
+        "country": "Algeria",
+        "tradition": "Amazigh Motifs",
+        "type": "Textile Art",
+        "meaning": "Geometric motifs are used in Amazigh textile traditions to express identity, heritage and belonging."
+    },
+    {
+        "country": "Angola",
+        "tradition": "Sona",
+        "type": "Sand Drawing",
+        "meaning": "Geometric drawings created in sand preserve knowledge, stories and visual patterns."
+    },
+    {
+        "country": "Benin",
+        "tradition": "Royal Art of Benin",
+        "type": "Metalwork",
+        "meaning": "Royal artistic traditions preserve histories, ceremonies and the visual identity of the former Kingdom of Benin."
+    },
+    {
+        "country": "Botswana",
+        "tradition": "Basketry",
+        "type": "Craft",
+        "meaning": "Basketry traditions use locally sourced materials and distinctive patterns passed through generations."
+    },
+    {
+        "country": "Burkina Faso",
+        "tradition": "Bogolan and Textile Arts",
+        "type": "Textile Art",
+        "meaning": "Traditional textile practices communicate cultural identity through weaving, dyeing and pattern."
+    },
+    {
+        "country": "Burundi",
+        "tradition": "Royal Drumming",
+        "type": "Performing Art",
+        "meaning": "Drumming traditions have long carried ceremonial, social and cultural significance."
+    },
+    {
+        "country": "Cabo Verde",
+        "tradition": "Island Textile Arts",
+        "type": "Craft",
+        "meaning": "Textile and craft traditions reflect the islands' layered African and Atlantic cultural heritage."
+    },
+    {
+        "country": "Cameroon",
+        "tradition": "Bamileke Arts",
+        "type": "Art",
+        "meaning": "Bamileke artistic traditions include elaborate beadwork, masks, textiles and ceremonial objects."
+    },
+    {
+        "country": "Central African Republic",
+        "tradition": "Traditional Basketry",
+        "type": "Craft",
+        "meaning": "Basketry and woven objects reflect practical knowledge and artistic traditions across communities."
+    },
+    {
+        "country": "Chad",
+        "tradition": "Sahelian Textile Arts",
+        "type": "Textile Art",
+        "meaning": "Textile traditions across Chad reflect the cultural diversity of communities in the Sahel."
+    },
+    {
+        "country": "Comoros",
+        "tradition": "Island Textile Traditions",
+        "type": "Textile Art",
+        "meaning": "Clothing and textile practices reflect Comoros' island heritage and connections across the Indian Ocean."
+    },
+    {
+        "country": "Côte d'Ivoire",
+        "tradition": "Traditional Loincloth Weaving",
+        "type": "Textile Art",
+        "meaning": "Traditional woven fabrics use patterns connected to the cultural and social contexts of different communities."
+    },
+    {
+        "country": "Democratic Republic of the Congo",
+        "tradition": "Luba Lukasa",
+        "type": "Memory Art",
+        "meaning": "Lukasa memory boards encode historical knowledge through visual arrangements of beads, shells and other materials."
+    },
+    {
+        "country": "Djibouti",
+        "tradition": "Somali-Issa Heritage",
+        "type": "Cultural Tradition",
+        "meaning": "Oral traditions, customary law and artistic practices preserve community identity in the Horn of Africa."
+    },
+    {
+        "country": "Egypt",
+        "tradition": "Ancient Egyptian Symbols",
+        "type": "Visual Language",
+        "meaning": "Ancient Egyptian visual symbols communicated religious, political and cultural ideas."
+    },
+    {
+        "country": "Equatorial Guinea",
+        "tradition": "Traditional Woodcarving",
+        "type": "Craft",
+        "meaning": "Woodcarving traditions form part of the artistic heritage of communities in the region."
+    },
+    {
+        "country": "Eritrea",
+        "tradition": "Highland Textile Arts",
+        "type": "Textile Art",
+        "meaning": "Traditional clothing and textile practices reflect Eritrea's diverse cultural communities."
+    },
+    {
+        "country": "Eswatini",
+        "tradition": "Traditional Beadwork",
+        "type": "Adornment",
+        "meaning": "Beadwork and ceremonial dress communicate identity, social roles and cultural heritage."
+    },
+    {
+        "country": "Ethiopia",
+        "tradition": "Ethiopian Cross",
+        "type": "Religious Art",
+        "meaning": "Distinctive Ethiopian cross forms are important expressions of Ethiopian Christian artistic heritage."
+    },
+    {
+        "country": "Gabon",
+        "tradition": "Fang Artistic Heritage",
+        "type": "Sculpture",
+        "meaning": "Fang artistic traditions include distinctive carved forms and objects connected to spiritual and social life."
+    },
+    {
+        "country": "Gambia",
+        "tradition": "Mandinka Textile Arts",
+        "type": "Textile Art",
+        "meaning": "Textile and craft traditions contribute to the cultural identity of Mandinka and other communities."
+    },
+    {
+        "country": "Ghana",
+        "tradition": "Adinkra",
+        "type": "Symbolic Art",
+        "meaning": "Adinkra symbols communicate ideas, values and beliefs through visual forms."
+    },
+    {
+        "country": "Guinea",
+        "tradition": "Fouta Textile Arts",
+        "type": "Textile Art",
+        "meaning": "Textile traditions reflect the craftsmanship and cultural heritage of communities in Guinea."
+    },
+    {
+        "country": "Guinea-Bissau",
+        "tradition": "Bijagós Art",
+        "type": "Sculpture",
+        "meaning": "Bijagós artistic traditions include sculptural forms connected to community life and cultural practices."
+    },
+    {
+        "country": "Kenya",
+        "tradition": "Maasai Beadwork",
+        "type": "Adornment",
+        "meaning": "Beadwork communicates identity, age, social roles and cultural belonging."
+    },
+    {
+        "country": "Lesotho",
+        "tradition": "Basotho Blanket",
+        "type": "Textile",
+        "meaning": "The Basotho blanket has become an important expression of Basotho identity and cultural pride."
+    },
+    {
+        "country": "Liberia",
+        "tradition": "Kpelle Textile Arts",
+        "type": "Textile Art",
+        "meaning": "Traditional textile practices preserve local craftsmanship and cultural expression."
+    },
+    {
+        "country": "Libya",
+        "tradition": "Tuareg and Amazigh Arts",
+        "type": "Cultural Art",
+        "meaning": "North African artistic traditions express heritage through textiles, jewelry and geometric forms."
+    },
+    {
+        "country": "Madagascar",
+        "tradition": "Woven Textile Arts",
+        "type": "Textile Art",
+        "meaning": "Weaving traditions are an important part of Malagasy craftsmanship and cultural expression."
+    },
+    {
+        "country": "Malawi",
+        "tradition": "Traditional Basketry",
+        "type": "Craft",
+        "meaning": "Basketry traditions combine practical knowledge with distinctive local craftsmanship."
+    },
+    {
+        "country": "Mali",
+        "tradition": "Bogolanfini",
+        "type": "Textile Art",
+        "meaning": "Bogolanfini uses handwoven cloth, mud and natural dyes to create meaningful patterns."
+    },
+    {
+        "country": "Mauritania",
+        "tradition": "Saharan Textile Arts",
+        "type": "Textile Art",
+        "meaning": "Traditional clothing and textiles reflect the heritage of communities living across the Sahara."
+    },
+    {
+        "country": "Mauritius",
+        "tradition": "Indian Ocean Craft",
+        "type": "Cultural Art",
+        "meaning": "Mauritian craft traditions reflect the island's diverse African, Asian and European cultural influences."
+    },
+    {
+        "country": "Morocco",
+        "tradition": "Amazigh Weaving",
+        "type": "Textile Art",
+        "meaning": "Amazigh weaving uses geometric patterns and colors to express cultural identity and heritage."
+    },
+    {
+        "country": "Mozambique",
+        "tradition": "Makonde Art",
+        "type": "Woodcarving",
+        "meaning": "Makonde carving is known for expressive sculpture and intricate artistic traditions."
+    },
+    {
+        "country": "Namibia",
+        "tradition": "Himba Adornment",
+        "type": "Adornment",
+        "meaning": "Adornment, hairstyle and dress form important expressions of identity within Himba communities."
+    },
+    {
+        "country": "Niger",
+        "tradition": "Tuareg Jewelry",
+        "type": "Metalwork",
+        "meaning": "Tuareg jewelry and craft traditions carry cultural identity and symbolic meaning."
+    },
+    {
+        "country": "Nigeria",
+        "tradition": "Nsibidi",
+        "type": "Visual Language",
+        "meaning": "Nsibidi is a system of signs associated with communities in southeastern Nigeria and neighboring regions."
+    },
+    {
+        "country": "Republic of the Congo",
+        "tradition": "Kongo Artistic Heritage",
+        "type": "Sculpture",
+        "meaning": "Kongo artistic traditions include sculpture, textiles and objects connected to social and spiritual life."
+    },
+    {
+        "country": "Rwanda",
+        "tradition": "Imigongo",
+        "type": "Visual Art",
+        "meaning": "Imigongo is a distinctive Rwandan art tradition known for geometric designs and relief patterns."
+    },
+    {
+        "country": "São Tomé and Príncipe",
+        "tradition": "Island Heritage",
+        "type": "Cultural Art",
+        "meaning": "Island traditions reflect African heritage shaped by centuries of cultural exchange."
+    },
+    {
+        "country": "Senegal",
+        "tradition": "Wolof Textile Arts",
+        "type": "Textile Art",
+        "meaning": "Textile and clothing traditions form an important part of Senegalese cultural expression."
+    },
+    {
+        "country": "Seychelles",
+        "tradition": "Creole Craft",
+        "type": "Cultural Art",
+        "meaning": "Seychellois craft traditions reflect the islands' African, European and Indian Ocean heritage."
+    },
+    {
+        "country": "Sierra Leone",
+        "tradition": "Mende Arts",
+        "type": "Mask Art",
+        "meaning": "Mende artistic traditions include masks, performance and objects connected to community life."
+    },
+    {
+        "country": "Somalia",
+        "tradition": "Somali Textile Arts",
+        "type": "Textile Art",
+        "meaning": "Traditional clothing and textile practices form part of Somali cultural identity."
+    },
+    {
+        "country": "South Africa",
+        "tradition": "Ndebele Geometry",
+        "type": "Visual Art",
+        "meaning": "Ndebele visual art is known for bold geometric compositions used in architecture, dress and beadwork."
+    },
+    {
+        "country": "South Sudan",
+        "tradition": "Traditional Beadwork",
+        "type": "Adornment",
+        "meaning": "Beadwork and adornment communicate identity and social belonging among several communities."
+    },
+    {
+        "country": "Sudan",
+        "tradition": "Nubian Heritage",
+        "type": "Cultural Art",
+        "meaning": "Nubian traditions include distinctive architecture, decorative arts and cultural practices."
+    },
+    {
+        "country": "Tanzania",
+        "tradition": "Khanga",
+        "type": "Textile",
+        "meaning": "Khanga combines decorative design with Swahili messages and is deeply connected to Tanzanian identity."
+    },
+    {
+        "country": "Togo",
+        "tradition": "Ewe Textile Arts",
+        "type": "Textile Art",
+        "meaning": "Ewe weaving traditions use cloth and pattern as forms of cultural expression."
+    },
+    {
+        "country": "Tunisia",
+        "tradition": "North African Textile Arts",
+        "type": "Textile Art",
+        "meaning": "Traditional textiles, embroidery and decorative arts preserve Tunisia's layered cultural heritage."
+    },
+    {
+        "country": "Uganda",
+        "tradition": "Buganda Barkcloth",
+        "type": "Textile",
+        "meaning": "Barkcloth production is a longstanding Ugandan craft tradition with ceremonial and cultural significance."
+    },
+    {
+        "country": "Zambia",
+        "tradition": "Traditional Textile and Craft Arts",
+        "type": "Craft",
+        "meaning": "Zambian communities preserve diverse traditions in weaving, basketry, carving and adornment."
+    },
+    {
+        "country": "Zimbabwe",
+        "tradition": "Zimbabwe Bird",
+        "type": "National Heritage",
+        "meaning": "The Zimbabwe Bird is associated with Great Zimbabwe and has become a powerful national cultural symbol."
+    }
+]

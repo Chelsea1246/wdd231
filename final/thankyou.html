@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Share a Discovery | AfriWay</title>
+
+    <meta
+        name="description"
+        content="Share an African fashion, art or cultural tradition you would like AfriWay to explore."
+    >
+    <meta name="author" content="Chelsea Afriyie Opoku">
+    <meta name="theme-color" content="#641F2B">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="AfriWay home">
+            Afri<span>Way</span><span class="logo-period">.</span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            type="button"
+        >
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav
+            class="primary-navigation"
+            id="primary-navigation"
+            aria-label="Main navigation"
+        >
+            <a href="index.html">Home</a>
+            <a href="fashion.html">Fashion</a>
+            <a href="culture.html">Culture</a>
+            <a href="thankyou.html" aria-current="page">Share a Discovery</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="intro-section">
+            <p class="eyebrow">The journey continues with you</p>
+
+            <h1>
+                WHAT HAVE<br>
+                <span>YOU DISCOVERED?</span>
+            </h1>
+
+            <p>
+                Africa holds countless stories, creative traditions and
+                cultural expressions. Tell us about a tradition, place,
+                textile, art form or story you think deserves to be explored.
+            </p>
+        </section>
+
+        <section class="symbol-section" aria-labelledby="discovery-heading">
+            <div class="section-heading">
+                <p class="eyebrow">Share your knowledge</p>
+                <h2 id="discovery-heading">YOUR DISCOVERY</h2>
+                <p>Fields marked with * are required.</p>
+            </div>
+
+            <form id="discovery-form" class="symbol-controls">
+                <div class="control-group">
+                    <label for="discovery-name">Your name</label>
+                    <input
+                        type="text"
+                        id="discovery-name"
+                        name="name"
+                        maxlength="80"
+                        autocomplete="name"
+                        placeholder="Your name (optional)"
+                    >
+                </div>
+
+                <div class="control-group">
+                    <label for="discovery-country">Country or region *</label>
+                    <input
+                        type="text"
+                        id="discovery-country"
+                        name="country"
+                        maxlength="100"
+                        autocomplete="country-name"
+                        placeholder="e.g. Ghana"
+                        required
+                    >
+                </div>
+
+                <div class="control-group">
+                    <label for="discovery-title">Name of the tradition or story *</label>
+                    <input
+                        type="text"
+                        id="discovery-title"
+                        name="title"
+                        maxlength="120"
+                        placeholder="e.g. A textile, craft or celebration"
+                        required
+                    >
+                </div>
+
+                <div class="control-group">
+                    <label for="discovery-category">Category *</label>
+                    <select
+                        id="discovery-category"
+                        name="category"
+                        required
+                    >
+                        <option value="">Select a category</option>
+                        <option value="Fashion and textiles">
+                            Fashion and textiles
+                        </option>
+                        <option value="Symbols and visual art">
+                            Symbols and visual art
+                        </option>
+                        <option value="Craftsmanship">
+                            Craftsmanship
+                        </option>
+                        <option value="Music and performance">
+                            Music and performance
+                        </option>
+                        <option value="Food and traditions">
+                            Food and traditions
+                        </option>
+                        <option value="Other">
+                            Other
+                        </option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="discovery-description">
+                        Tell us about your discovery *
+                    </label>
+                    <textarea
+                        id="discovery-description"
+                        name="description"
+                        rows="5"
+                        maxlength="1500"
+                        placeholder="What makes this tradition or story meaningful?"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="control-group">
+                    <label for="discovery-source">Source link (optional)</label>
+                    <input
+                        type="url"
+                        id="discovery-source"
+                        name="source"
+                        placeholder="https://example.com"
+                    >
+                </div>
+
+                <div class="control-group">
+                    <button class="button button-dark" type="submit">
+                        Submit your discovery
+                        <span aria-hidden="true">↗</span>
+                    </button>
+                </div>
+            </form>
+
+            <div id="discovery-status" role="status" aria-live="polite" hidden>
+                <h2>Thank you for sharing!</h2>
+                <p>Your discovery has been saved in this browser.</p>
+                <a class="text-link" href="index.html">
+                    Return to AfriWay
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+            <p class="eyebrow">
+                Note: this project demonstration saves entries only in this
+                browser. It does not transmit your information to AfriWay.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <a class="logo logo-footer" href="index.html">
+                Afri<span>Way</span><span class="logo-period">.</span>
+            </a>
+            <p>Discover Africa the African Way.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="fashion.html">Fashion</a>
+            <a href="culture.html">Culture</a>
+            <a href="attributions.html">Image attributions</a>
+        </div>
+
+        <div class="footer-project">
+            <p>A cultural discovery project by Chelsea Afriyie Opoku.</p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="current-year">2026</span> AfriWay.
+                All rights reserved.
+            </p>
+            <a href="#main-content">Back to top ↑</a>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { saveDiscovery } from "./scripts/storage.js";
+
+        const form = document.querySelector("#discovery-form");
+        const status = document.querySelector("#discovery-status");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            if (!form.reportValidity()) {
+                return;
+            }
+
+            const formData = new FormData(form);
+
+            const discovery = {
+                name: formData.get("name").trim(),
+                country: formData.get("country").trim(),
+                title: formData.get("title").trim(),
+                category: formData.get("category"),
+                description: formData.get("description").trim(),
+                source: formData.get("source").trim()
+            };
+
+            const saved = saveDiscovery(discovery);
+
+            if (saved) {
+                form.hidden = true;
+                status.hidden = false;
+                status.querySelector("p").textContent =
+                    "Thank you! Your discovery has been saved in this browser. " +
+                    "It has not been sent to a server.";
+                status.scrollIntoView({ behavior: "smooth", block: "center" });
+            } else {
+                status.hidden = false;
+                status.querySelector("h2").textContent =
+                    "Your discovery could not be saved";
+                status.querySelector("p").textContent =
+                    "Your browser may have storage disabled or unavailable. " +
+                    "Please try again in another browser.";
+            }
+        });
+    </script>
+</body>
+</html>

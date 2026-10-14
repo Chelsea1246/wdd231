@@ -1,0 +1,705 @@
+
+/* ==========================================
+   AFRIWAY — LARGE SCREEN STYLES
+   ========================================== */
+
+@media screen and (min-width: 768px) {
+
+    /* ---------- HEADER ---------- */
+
+    .site-header {
+        padding: 1.25rem 4vw;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(10px);
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    .main-nav {
+        display: flex;
+        align-items: center;
+        gap: 1.75rem;
+    }
+
+    .main-nav a {
+        position: relative;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .main-nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.35rem;
+        width: 0;
+        height: 1px;
+        background-color: #641f2b;
+        transition: width 0.3s ease;
+    }
+
+    .main-nav a:hover::after,
+    .main-nav a.active::after {
+        width: 100%;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+        min-height: 100vh;
+        padding: 8rem 4vw 4rem;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 1100px;
+        margin-inline: auto;
+        text-align: center;
+    }
+
+    .hero h1 {
+        width: 100%;
+        font-size: clamp(6rem, 13vw, 12rem);
+        line-height: 0.9;
+        letter-spacing: -0.04em;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .tagline {
+        max-width: 650px;
+        margin: 1.5rem auto 0;
+        font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+        line-height: 1.6;
+    }
+
+    .symbol {
+        opacity: 0.75;
+    }
+
+    .symbol-1 {
+        top: 20%;
+        left: 10%;
+        font-size: 1.8rem;
+    }
+
+    .symbol-2 {
+        top: 25%;
+        right: 13%;
+        font-size: 1.2rem;
+    }
+
+    .symbol-3 {
+        top: 45%;
+        left: 18%;
+        font-size: 2rem;
+    }
+
+    .symbol-4 {
+        top: 60%;
+        right: 10%;
+        font-size: 1.5rem;
+    }
+
+    .symbol-5 {
+        bottom: 18%;
+        left: 15%;
+        font-size: 1.7rem;
+    }
+
+
+    /* ---------- STORY SECTIONS ---------- */
+
+    .story-section {
+        min-height: 85vh;
+        padding: 7rem 8vw;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+        justify-content: center;
+        gap: 5vw;
+    }
+
+    .story-section:nth-child(even) {
+        direction: rtl;
+    }
+
+    .story-section:nth-child(even) > * {
+        direction: ltr;
+    }
+
+    .story-section > .story-text {
+        width: 100%;
+        max-width: 600px;
+        min-width: 0;
+    }
+
+    .story-section > .story-image {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .story-section > .story-image img {
+        display: block;
+        width: 100%;
+        height: 65vh;
+        min-height: 400px;
+        object-fit: cover;
+    }
+
+    .story-section:not(:has(.story-image)) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .story-section:not(:has(.story-image)) > .story-text {
+        margin-inline: auto;
+    }
+
+    .story-text h2 {
+        font-size: clamp(3.25rem, 5.5vw, 5.5rem);
+        line-height: 0.98;
+        overflow-wrap: normal;
+    }
+
+    .story-text p:not(.eyebrow) {
+        max-width: 520px;
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .eyebrow {
+        font-size: 0.75rem;
+        letter-spacing: 0.14em;
+    }
+
+
+    /* ---------- HERITAGE LIBRARY ---------- */
+
+    .symbols-section {
+        min-height: auto;
+        padding: 7rem 6vw;
+        display: block;
+        overflow: visible;
+    }
+
+    .section-heading {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto 3rem;
+        text-align: center;
+    }
+
+    .section-heading h2 {
+        font-size: clamp(3.5rem, 6.5vw, 6.5rem);
+        line-height: 0.98;
+        overflow-wrap: normal;
+    }
+
+    .section-heading p {
+        max-width: 680px;
+        margin: 1.25rem auto 0;
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .heritage-controls {
+        width: 100%;
+        max-width: 850px;
+        margin: 0 auto 3.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .heritage-controls label {
+        margin-top: 0.75rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    .heritage-controls input,
+    .heritage-controls select {
+        width: 100%;
+        min-height: 48px;
+        padding: 0.8rem 1rem;
+        border: 1px solid #D4C2AC;
+        border-radius: 0;
+        background: #fffdf9;
+        color: #25211F;
+        font: inherit;
+        font-size: 0.95rem;
+    }
+
+    .heritage-controls input:focus,
+    .heritage-controls select:focus {
+        outline: 2px solid #6b1f2b;
+        outline-offset: 2px;
+    }
+
+    #symbol-library {
+        width: 100%;
+        max-width: 1500px;
+        margin-inline: auto;
+    }
+
+    .symbol-letter {
+        width: 100%;
+        margin: 0 auto 4.5rem;
+    }
+
+    .symbol-letter > h3 {
+        margin-bottom: 1.5rem;
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+
+    .symbol-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    /* Country cards */
+
+    .symbol-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        min-width: 0;
+        min-height: 280px;
+        padding: 1.75rem;
+        overflow: hidden;
+
+        background-color: #E8DCCB;
+        color: #25211F;
+        border: 1px solid #D4C2AC;
+        border-radius: 3px;
+
+        transition:
+            transform 0.3s ease,
+            background-color 0.3s ease,
+            border-color 0.3s ease;
+    }
+
+    .symbol-card h4 {
+        margin-bottom: 0.75rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 1.35;
+        color: #25211F;
+        overflow-wrap: break-word;
+    }
+
+    .symbol-card p {
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.7;
+        color: #40372F;
+        overflow-wrap: break-word;
+    }
+
+    .symbol-card .culture-symbol {
+        font-size: 2.5rem;
+    }
+
+    .symbol-more {
+        align-self: flex-start;
+        margin-top: 1rem;
+        padding: 0.5rem 0;
+        border: 0;
+        border-bottom: 1px solid currentColor;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        font-size: 0.75rem;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+    }
+
+    .symbol-more:hover {
+        color: #6b1f2b;
+    }
+
+    .no-results,
+    .error-message {
+        padding: 2rem 0;
+        line-height: 1.8;
+    }
+
+
+    /* ---------- CULTURE PREVIEW ---------- */
+
+    .culture-preview {
+        min-height: 85vh;
+        padding: 7rem 8vw;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .culture-preview .story-text {
+        width: 100%;
+        max-width: 650px;
+    }
+
+
+    /* ---------- FINAL SECTION ---------- */
+
+    .final-section {
+        min-height: 65vh;
+        padding: 7rem 6vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .final-section h2 {
+        max-width: 1000px;
+        font-size: clamp(3.5rem, 7vw, 7rem);
+        line-height: 1;
+        overflow-wrap: normal;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .site-footer {
+        padding: 4rem 6vw 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: start;
+        gap: 2.5rem;
+        text-align: left;
+    }
+
+    .footer-links {
+        margin: 0;
+    }
+
+    .copyright {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+}
+
+
+/* ==========================================
+   WIDE DESKTOP SCREENS
+   ========================================== */
+
+@media screen and (min-width: 1200px) {
+
+    .symbol-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.75rem;
+    }
+
+    .symbol-card {
+        min-height: 300px;
+        padding: 2rem;
+    }
+}
+
+
+/* ==========================================
+   MOBILE AND SMALL SCREENS
+   ========================================== */
+
+@media screen and (max-width: 767px) {
+
+    .heritage-controls {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin: 2rem 0 3rem;
+    }
+
+    .heritage-controls label {
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .heritage-controls input,
+    .heritage-controls select {
+        width: 100%;
+        min-height: 46px;
+        padding: 0.75rem;
+        border: 1px solid #D4C2AC;
+        border-radius: 0;
+        background: #fffdf9;
+        color: #25211F;
+        font: inherit;
+    }
+
+    .symbol-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.85rem;
+    }
+
+    .symbol-card {
+        min-width: 0;
+        min-height: 220px;
+        padding: 1rem;
+        background-color: #E8DCCB;
+        color: #25211F;
+        border: 1px solid #D4C2AC;
+    }
+
+    .symbol-card h4 {
+        font-size: 1rem;
+        line-height: 1.35;
+        overflow-wrap: break-word;
+    }
+
+    .symbol-card p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .symbol-card .culture-symbol {
+        font-size: 2rem;
+    }
+
+    .symbol-more {
+        margin-top: 0.75rem;
+        padding: 0.5rem 0;
+        border: 0;
+        border-bottom: 1px solid currentColor;
+        background: transparent;
+        font: inherit;
+        font-size: 0.7rem;
+        cursor: pointer;
+    }
+}
+
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .symbol-card,
+    .main-nav a::after {
+        transition: none;
+    }
+}
+
+
+/* ========================================
+   AFRIWAY HERITAGE SEARCH & FILTERS
+======================================== */
+
+.heritage-controls {
+    width: min(100% - 2rem, 900px);
+    margin: 2rem auto 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    align-items: end;
+}
+
+.search-box,
+.category-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    text-align: left;
+}
+
+.search-box label,
+.category-box label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #6b1f2b;
+}
+
+#symbol-search,
+#symbol-type {
+    width: 100%;
+    min-height: 54px;
+    padding: 0.9rem 1rem;
+    border: 1px solid #d6c6b3;
+    border-radius: 2px;
+    background-color: #fffdf9;
+    color: #29231f;
+    font: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+#symbol-search::placeholder {
+    color: #8b8178;
+    opacity: 1;
+}
+
+#symbol-search:focus,
+#symbol-type:focus {
+    border-color: #9c7747;
+    box-shadow: 0 0 0 3px rgb(156 119 71 / 15%);
+    background-color: #ffffff;
+}
+
+#symbol-type {
+    cursor: pointer;
+}
+
+#symbol-type option {
+    background-color: #fffdf9;
+    color: #29231f;
+}
+
+/* Search results message */
+
+.no-results,
+.error-message {
+    grid-column: 1 / -1;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #6b1f2b;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Wider screens */
+
+@media screen and (min-width: 768px) {
+    .heritage-controls {
+        grid-template-columns: 2fr 1fr;
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+        margin-bottom: 3.5rem;
+    }
+}
+
+/* Smaller screens */
+
+@media screen and (max-width: 480px) {
+    .heritage-controls {
+        width: calc(100% - 2rem);
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+        gap: 1rem;
+    }
+
+    #symbol-search,
+    #symbol-type {
+        min-height: 50px;
+        font-size: 0.875rem;
+    }
+
+    .search-box label,
+    .category-box label {
+        font-size: 0.7rem;
+    }
+}
+
+
+/* ========================================
+   AFRIWAY COUNTRY CARD INTERACTIONS
+======================================== */
+
+.symbol-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #d4c2ac;
+    background: #e8dccb;
+    color: #25211f;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.symbol-card:hover {
+    transform: translateY(-6px);
+    border-color: #9c7747;
+    box-shadow: 0 14px 30px rgb(37 33 31 / 12%);
+}
+
+.culture-symbol {
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+.symbol-card:hover .culture-symbol {
+    transform: scale(1.12) rotate(5deg);
+    color: #6b1f2b;
+}
+
+.symbol-more {
+    cursor: pointer;
+    border: 1px solid #6b1f2b;
+    background: transparent;
+    color: #6b1f2b;
+    padding: 0.7rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.symbol-more:hover,
+.symbol-more:focus-visible {
+    background: #6b1f2b;
+    color: #fffdf9;
+}
+
+.symbol-more:focus-visible {
+    outline: 2px solid #9c7747;
+    outline-offset: 4px;
+}
+
+/* Respect visitors who prefer reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .symbol-card,
+    .culture-symbol,
+    .symbol-more {
+        transition: none;
+    }
+
+    .symbol-card:hover,
+    .symbol-card:hover .culture-symbol {
+        transform: none;
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.primary-navigation {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.primary-navigation a {
+    position: relative;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}

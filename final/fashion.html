@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>African Fashion | AfriWay</title>
+
+    <meta
+        name="description"
+        content="Explore African textiles, adornment, craftsmanship and fashion traditions with AfriWay."
+    >
+    <meta name="author" content="Chelsea Afriyie Opoku">
+    <meta name="theme-color" content="#641F2B">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/fashion.js"></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <a class="logo" href="index.html" aria-label="AfriWay home">
+            Afri<span>Way</span><span class="logo-period">.</span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            type="button"
+        >
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav
+            class="primary-navigation"
+            id="primary-navigation"
+            aria-label="Main navigation"
+        >
+            <a href="index.html">Home</a>
+            <a href="fashion.html" aria-current="page">Fashion</a>
+            <a href="culture.html">Culture</a>
+            <a href="thankyou.html">Share a Discovery</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <p class="eyebrow">01 / Style and identity</p>
+
+                <h1 id="hero-title">
+                    WOVEN WITH<br>
+                    <span>MEANING.</span>
+                </h1>
+
+                <p class="hero-tagline">
+                    Fashion is more than what we wear.
+                </p>
+
+                <p class="hero-description">
+                    Discover the textiles, techniques and creative traditions
+                    that shape clothing and adornment across Africa.
+                </p>
+
+                <a class="button button-light" href="#fashion-discover">
+                    Explore fashion
+                    <span aria-hidden="true">↓</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="intro-section" id="fashion-discover">
+            <p class="eyebrow">Materials, skill and expression</p>
+
+            <h2>
+                EVERY THREAD<br>
+                <span>HAS A STORY.</span>
+            </h2>
+
+            <p>
+                From handwoven fabrics to beadwork and contemporary design,
+                African fashion includes many different techniques,
+                communities and creative voices. Explore this introductory
+                collection and discover what makes each tradition distinctive.
+            </p>
+        </section>
+
+        <section
+            class="symbol-section"
+            aria-labelledby="fashion-library-heading"
+        >
+            <div class="section-heading">
+                <p class="eyebrow">The AfriWay style collection</p>
+
+                <h2 id="fashion-library-heading">
+                    EXPLORE THE<br>
+                    <span>DETAILS.</span>
+                </h2>
+
+                <p>
+                    Search by name, country or technique. Save traditions
+                    that you would like to explore again.
+                </p>
+            </div>
+
+            <div class="symbol-controls">
+                <div class="control-group">
+                    <label for="fashion-search">
+                        Search fashion traditions
+                    </label>
+
+                    <input
+                        type="search"
+                        id="fashion-search"
+                        placeholder="Try Ghana, weaving or beadwork..."
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div class="control-group">
+                    <label for="fashion-category">
+                        Filter by category
+                    </label>
+
+                    <select id="fashion-category">
+                        <option value="all">All categories</option>
+                        <option value="Textiles">Textiles</option>
+                        <option value="Textile Art">Textile art</option>
+                        <option value="Adornment">Adornment</option>
+                        <option value="Craftsmanship">Craftsmanship</option>
+                    </select>
+                </div>
+
+                <p id="fashion-count" aria-live="polite">
+                    Loading fashion traditions...
+                </p>
+            </div>
+
+            <div
+                id="fashion-library"
+                class="symbol-library"
+                aria-live="polite"
+            >
+                <p class="loading-message">
+                    Discovering African fashion...
+                </p>
+            </div>
+        </section>
+
+        <section class="story-section">
+            <div class="story-image">
+                <img
+                    src="images/african-fashion-hero.jpg"
+                    alt="African-inspired fashion and textile design"
+                    loading="lazy"
+                    width="1200"
+                    height="1500"
+                >
+            </div>
+
+            <div class="story-text">
+                <p class="eyebrow">Past, present and future</p>
+
+                <h2>
+                    ROOTED IN<br>
+                    <span>HERITAGE.</span>
+                </h2>
+
+                <p>
+                    Designers, weavers, makers and artisans continue to shape
+                    fashion in different ways. Traditional knowledge can
+                    inspire contemporary expression while the communities
+                    behind that knowledge deserve recognition and respect.
+                </p>
+
+                <a class="text-link" href="culture.html">
+                    Explore culture
+                    <span aria-hidden="true">↗</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="share-section">
+            <p class="eyebrow">Keep exploring</p>
+
+            <h2>
+                EVERY STORY<br>
+                <span>DESERVES TO BE SEEN.</span>
+            </h2>
+
+            <p>
+                Know a fashion tradition we should explore? Share your
+                discovery with AfriWay.
+            </p>
+
+            <a class="button button-dark" href="thankyou.html">
+                Share a discovery
+                <span aria-hidden="true">↗</span>
+            </a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <a class="logo logo-footer" href="index.html">
+                Afri<span>Way</span><span class="logo-period">.</span>
+            </a>
+
+            <p>Discover Africa the African Way.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="fashion.html">Fashion</a>
+            <a href="culture.html">Culture</a>
+            <a href="attributions.html">Image attributions</a>
+        </div>
+
+        <div class="footer-project">
+            <p>A cultural discovery project by Chelsea Afriyie Opoku.</p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; <span id="current-year">2026</span> AfriWay.
+                All rights reserved.
+            </p>
+
+            <a href="#main-content">Back to top ↑</a>
+        </div>
+    </footer>
+</body>
+</html>

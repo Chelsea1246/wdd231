@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Chelsea Afriyie Opoku">
+    <meta name="description" content="Explore African fabrics, discover their countries of origin, learn about textile traditions, and save your favorite fabrics.">
+
+    <meta property="og:title" content="Explore Fabrics | African Fabric Guide">
+    <meta property="og:description" content="Discover African textiles, their origins, patterns, and cultural stories.">
+    <meta property="og:type" content="website">
+
+    <title>Explore Fabrics | African Fabric Guide</title>
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/large.css">
+
+    <script src="js/main.js" type="module"></script>
+    <script src="js/fabrics.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a class="site-name" href="index.html">
+                African Fabric Guide
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation">
+                ☰
+            </button>
+
+            <nav id="primary-navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="fabrics.html">Explore Fabrics</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">EXPLORE THE COLLECTION</p>
+            <h1>African Fabrics</h1>
+            <p>
+                Discover the stories, traditions, and craftsmanship
+                behind textiles from across Africa.
+            </p>
+        </section>
+
+        <section class="fabric-collection" aria-labelledby="collection-heading">
+            <h2 id="collection-heading">Discover the Fabrics</h2>
+
+            <div class="fabric-controls">
+                <div class="search-control">
+                    <label for="fabric-search">Search fabrics</label>
+                    <input
+                        type="search"
+                        id="fabric-search"
+                        placeholder="Search by name or country">
+                </div>
+
+                <div class="filter-control">
+                    <label for="country-filter">Filter by country</label>
+                    <select id="country-filter">
+                        <option value="all">All locations</option>
+                    </select>
+                </div>
+
+                <label class="favorites-control">
+                    <input type="checkbox" id="favorites-filter">
+                    Show favorites only
+                </label>
+            </div>
+
+            <p id="fabric-count" aria-live="polite">Loading fabrics...</p>
+
+            <div id="fabric-grid" class="fabric-grid">
+                <p>Loading the fabric collection...</p>
+            </div>
+
+            <p id="fabric-error" class="error-message" role="alert" hidden>
+                The fabric collection could not be loaded. Please try again later.
+            </p>
+        </section>
+
+        <dialog id="fabric-dialog" aria-labelledby="dialog-title">
+            <div class="dialog-content">
+                <button
+                    id="dialog-close"
+                    class="dialog-close"
+                    type="button"
+                    aria-label="Close fabric details">
+                    &times;
+                </button>
+
+                <p class="eyebrow">FABRIC DETAILS</p>
+                <h2 id="dialog-title"></h2>
+                <p id="dialog-country"></p>
+                <p id="dialog-type"></p>
+                <p id="dialog-description"></p>
+                <button
+                    id="dialog-favorite"
+                    class="primary-button"
+                    type="button">
+                    Save to Favorites
+                </button>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> African Fabric Guide</p>
+
+        <div class="footer-links">
+            <a href="attributions.html">Attributions</a>
+            <a href="video.html">Project Demonstration</a>
+        </div>
+    </footer>
+</body>
+</html>

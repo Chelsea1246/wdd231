@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "Kente",
+        "country": "Ghana",
+        "type": "Handwoven cloth",
+        "description": "Kente is a colorful woven textile associated with Ghana, particularly the Asante and Ewe peoples. Its geometric patterns and colors are widely recognized in Ghanaian cultural celebrations."
+    },
+    {
+        "id": 2,
+        "name": "Adinkra Cloth",
+        "country": "Ghana",
+        "type": "Stamped textile",
+        "description": "Adinkra cloth is traditionally decorated with symbols that communicate ideas, values, and proverbs. It is associated especially with Akan communities in Ghana."
+    },
+    {
+        "id": 3,
+        "name": "Fugu",
+        "country": "Ghana",
+        "type": "Strip-woven cloth",
+        "description": "Fugu, also called batakari, is a traditional smock made from narrow woven strips. It is strongly associated with northern Ghana and is worn for cultural occasions and everyday use."
+    },
+    {
+        "id": 4,
+        "name": "Adire",
+        "country": "Nigeria",
+        "type": "Resist-dyed textile",
+        "description": "Adire is a Yoruba textile tradition known for indigo-dyed cloth. Artisans create patterns using resist-dyeing techniques such as stitching, tying, and applying paste."
+    },
+    {
+        "id": 5,
+        "name": "Aso Oke",
+        "country": "Nigeria",
+        "type": "Handwoven cloth",
+        "description": "Aso Oke is a traditional handwoven textile associated with Yoruba communities. It is often used for special garments, weddings, festivals, and other important occasions."
+    },
+    {
+        "id": 6,
+        "name": "Akwete Cloth",
+        "country": "Nigeria",
+        "type": "Handwoven cloth",
+        "description": "Akwete cloth is associated with the Igbo community of southeastern Nigeria. Traditionally woven on looms, it features distinctive patterns and is used for clothing and ceremonial purposes."
+    },
+    {
+        "id": 7,
+        "name": "Ankara",
+        "country": "Widely used across Africa",
+        "type": "Printed cotton fabric",
+        "description": "Ankara is known for its bold colors and repeating prints. Although often associated with African fashion, its wax-print history includes influences from Indonesian batik and European textile production."
+    },
+    {
+        "id": 8,
+        "name": "Bogolanfini",
+        "country": "Mali",
+        "type": "Mud-dyed cotton",
+        "description": "Bogolanfini, often called mud cloth, is a Malian textile traditionally decorated with patterns made using fermented mud and plant-based dyes. It is valued for its craftsmanship and cultural associations."
+    },
+    {
+        "id": 9,
+        "name": "Faso Dan Fani",
+        "country": "Burkina Faso",
+        "type": "Handwoven cotton",
+        "description": "Faso Dan Fani is a cotton textile made from woven strips and associated with Burkina Faso. It is an important expression of local weaving traditions and national cultural identity."
+    },
+    {
+        "id": 10,
+        "name": "Kuba Cloth",
+        "country": "Democratic Republic of the Congo",
+        "type": "Decorative woven textile",
+        "description": "Kuba cloth is produced by communities in the Kuba cultural region. Made from raffia palm fibers, it is known for intricate geometric designs, embroidery, and cut-pile techniques."
+    },
+    {
+        "id": 11,
+        "name": "Barkcloth",
+        "country": "Uganda",
+        "type": "Tree-bark textile",
+        "description": "Ugandan barkcloth is made by processing the inner bark of certain fig trees. It has a long cultural history in the Buganda region and is used in ceremonies and contemporary artistic work."
+    },
+    {
+        "id": 12,
+        "name": "Kanga",
+        "country": "East Africa",
+        "type": "Printed cotton cloth",
+        "description": "Kanga is a colorful rectangular cloth commonly worn in East Africa. Many kangas feature a central design, decorative borders, and a Swahili saying or message."
+    },
+    {
+        "id": 13,
+        "name": "Shweshwe",
+        "country": "South Africa",
+        "type": "Printed cotton fabric",
+        "description": "Shweshwe is a printed cotton fabric widely associated with South African dressmaking and heritage fashion. It is recognized for its intricate repeating patterns and distinctive color combinations."
+    },
+    {
+        "id": 14,
+        "name": "Basotho Blanket",
+        "country": "Lesotho",
+        "type": "Woven blanket",
+        "description": "The Basotho blanket is an important textile in Lesotho, worn for warmth and cultural occasions. Different designs and patterns have become recognizable parts of Basotho identity."
+    },
+    {
+        "id": 15,
+        "name": "Korhogo Cloth",
+        "country": "Côte d'Ivoire",
+        "type": "Painted cotton textile",
+        "description": "Korhogo cloth is associated with the Senufo people of northern Côte d'Ivoire. Traditionally made from handwoven cotton, it is decorated with painted motifs inspired by animals, people, and cultural life."
+    }
+]

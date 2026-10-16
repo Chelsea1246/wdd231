@@ -1,31 +1,74 @@
-/* ================================
-   AFRIWAY - SMALL SCREEN STYLES
-   ================================ */
 
-/* ---------- RESET ---------- */
+/* ========================================
+   AFRIWAY — SMALL SCREEN STYLES
+   Mobile-first design
+   Author: Chelsea Afriyie Opoku
+   ======================================== */
+
+/* ========================================
+   1. COLOURS AND GLOBAL SETTINGS
+   ======================================== */
+
+:root {
+    --color-white: #ffffff;
+    --color-cream: #f5f0e8;
+    --color-dark: #171412;
+    --color-burgundy: #641f2b;
+    --color-gold: #c29a5b;
+    --color-muted: #69675e;
+    --color-border: #d4c2ac;
+    --color-soft: #ebe1d4;
+
+    --font-body: "Poppins", Arial, sans-serif;
+    --font-heading: "Playfair Display", Georgia, serif;
+
+    --container-width: 1200px;
+    --section-space: 4.5rem;
+    --radius-small: 4px;
+    --radius-medium: 10px;
+
+    --shadow-soft: 0 12px 35px rgba(23, 20, 18, 0.08);
+    --transition: 250ms ease;
+}
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    color: #171412;
-    background-color: #ffffff;
-    line-height: 1.6;
-    overflow-x: hidden;
+    margin: 0;
+    background: var(--color-cream);
+    color: var(--color-dark);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+body,
+button,
+input,
+select {
+    font-family: var(--font-body);
 }
 
 img {
     display: block;
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+}
+
+button,
+input,
+select {
+    font-size: inherit;
+}
+
+button {
+    cursor: pointer;
 }
 
 a {
@@ -33,778 +76,893 @@ a {
     text-decoration: none;
 }
 
-button {
-    font: inherit;
+p {
+    margin-top: 0;
 }
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+}
 
-/* ---------- HEADER ---------- */
+h1 {
+    font-size: clamp(2.7rem, 11vw, 4.5rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 7vw, 3.2rem);
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+::selection {
+    background: var(--color-burgundy);
+    color: var(--color-white);
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 4px;
+}
+
+.container {
+    width: min(100% - 2rem, var(--container-width));
+    margin-inline: auto;
+}
+
+.section-padding {
+    padding-block: var(--section-space);
+}
+
+.eyebrow {
+    margin-bottom: 1rem;
+    color: var(--color-burgundy);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    max-width: 750px;
+    margin: 0 auto 1rem;
+    text-align: center;
+}
+
+.section-description {
+    max-width: 680px;
+    margin: 0 auto 2.5rem;
+    color: var(--color-muted);
+    text-align: center;
+}
+
+/* ========================================
+   2. HEADER AND NAVIGATION
+   ======================================== */
 
 .site-header {
-    position: fixed;
+    position: sticky;
+    z-index: 100;
     top: 0;
-    left: 0;
-    z-index: 1000;
-
-    width: 100%;
-    padding: 1.2rem 1.25rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    background: rgba(255, 255, 255, 0.94);
-    border-bottom: 1px solid rgba(23, 20, 18, 0.1);
+    gap: 1rem;
+    min-height: 76px;
+    padding: 0.8rem 1.25rem;
+    border-bottom: 1px solid rgba(212, 194, 172, 0.65);
+    background: rgba(245, 240, 232, 0.97);
+    backdrop-filter: blur(12px);
 }
 
-.logo {
-    font-family: "Cormorant Garamond", serif;
+.logo,
+.site-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--color-burgundy);
+    font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 700;
-    letter-spacing: 0.18em;
+    letter-spacing: -0.04em;
 }
 
+.logo img,
+.site-logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.menu-toggle,
 .menu-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #171412;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+    background: transparent;
+    color: var(--color-dark);
+    font-size: 1.35rem;
 }
 
+.primary-navigation,
 .main-nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 1rem 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-cream);
+    box-shadow: var(--shadow-soft);
 }
 
+.primary-navigation.is-open,
+.main-nav.is-open,
+.primary-navigation.active,
+.main-nav.active {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
 
-/* ---------- GENERAL ---------- */
+.primary-navigation a,
+.main-nav a {
+    display: block;
+    padding: 0.7rem 0;
+    color: var(--color-dark);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    transition: color var(--transition);
+}
 
-.eyebrow {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.2em;
+.primary-navigation a:hover,
+.main-nav a:hover,
+.primary-navigation a[aria-current="page"],
+.main-nav a[aria-current="page"] {
+    color: var(--color-burgundy);
+}
+
+/* ========================================
+   3. BUTTONS
+   ======================================== */
+
+.button,
+.button-dark,
+.button-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 48px;
+    padding: 0.8rem 1.35rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-small);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    text-align: center;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
 }
 
-.dark-section {
-    background-color: #171412;
-    color: #ffffff;
+.button {
+    background: var(--color-burgundy);
+    color: var(--color-white);
 }
 
-.light-section {
-    background-color: #f5f0e8;
-    color: #171412;
+.button:hover {
+    background: #49151e;
+    transform: translateY(-2px);
 }
 
+.button-dark {
+    background: var(--color-dark);
+    color: var(--color-white);
+}
 
-/* ---------- HERO ---------- */
+.button-dark:hover {
+    background: var(--color-burgundy);
+}
+
+.button-outline {
+    border-color: var(--color-burgundy);
+    background: transparent;
+    color: var(--color-burgundy);
+}
+
+.button-outline:hover {
+    background: var(--color-burgundy);
+    color: var(--color-white);
+}
+
+/* ========================================
+   4. HERO SECTION
+   ======================================== */
 
 .hero {
     position: relative;
-    min-height: 100svh;
-
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    padding: 6rem 1.5rem 3rem;
-
-    background:
-        linear-gradient(
-            rgba(23, 20, 18, 0.18),
-            rgba(23, 20, 18, 0.55)
-        ),
-        url("../images/african-fashion-hero.jpg");
-
-    background-size: cover;
-    background-position: center;
-
-    color: #ffffff;
+    min-height: 570px;
     overflow: hidden;
+    padding: 5rem 1.25rem;
+    background-color: var(--color-dark);
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(23, 20, 18, 0.86) 0%,
+            rgba(23, 20, 18, 0.55) 58%,
+            rgba(23, 20, 18, 0.22) 100%
+        ),
+        url("https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1800&q=85");
+    background-position: center;
+    background-size: cover;
+    color: var(--color-white);
+}
+
+.hero::after {
+    position: absolute;
+    right: -65px;
+    bottom: -100px;
+    width: 230px;
+    height: 230px;
+    border: 1px solid rgba(194, 154, 91, 0.65);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
 }
 
 .hero-content {
     position: relative;
-    z-index: 5;
-    text-align: center;
-    max-width: 900px;
+    z-index: 1;
+    width: min(100%, 720px);
+    margin-inline: auto;
+}
+
+.hero .eyebrow,
+.hero-tagline {
+    color: #e1bf85;
 }
 
 .hero h1 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(4rem, 18vw, 8rem);
-    line-height: 0.8;
-    letter-spacing: 0.04em;
-    font-weight: 600;
+    margin: 0 0 1.5rem;
+    color: var(--color-white);
 }
 
-.tagline {
-    margin-top: 1.5rem;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.35rem;
-    font-style: italic;
+.hero p {
+    max-width: 580px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
-.scroll-link {
-    display: inline-block;
-    margin-top: 4rem;
+.hero .button {
+    margin-top: 1rem;
+}
 
-    font-size: 0.7rem;
+.hero-tagline {
+    font-size: 0.75rem;
+    font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-
-    border-bottom: 1px solid #ffffff;
-    padding-bottom: 0.4rem;
 }
 
+/* Floating decorative shapes */
 
-/* ---------- FLOATING SYMBOLS ---------- */
-
-.symbol {
+.floating-symbols {
     position: absolute;
-    z-index: 2;
-
-    color: #c29a5b;
-    font-family: serif;
-
-    opacity: 0.65;
-
-    animation: floatSymbol 6s ease-in-out infinite;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
 }
 
-.symbol-1 {
-    top: 18%;
-    left: 8%;
-    font-size: 1.2rem;
+.floating-symbols .symbol {
+    position: absolute;
+    color: rgba(194, 154, 91, 0.65);
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 3.5rem);
+    animation: symbol-float 7s ease-in-out infinite alternate;
 }
 
-.symbol-2 {
-    top: 28%;
+.floating-symbols .symbol:nth-child(1) {
+    top: 15%;
     right: 12%;
-    font-size: 0.9rem;
 }
 
-.symbol-3 {
-    top: 42%;
-    left: 17%;
-    font-size: 1.5rem;
+.floating-symbols .symbol:nth-child(2) {
+    top: 50%;
+    right: 7%;
+    animation-delay: -2s;
 }
 
-.symbol-4 {
-    top: 58%;
-    right: 8%;
-    font-size: 1rem;
+.floating-symbols .symbol:nth-child(3) {
+    bottom: 16%;
+    right: 25%;
+    animation-delay: -4s;
 }
 
-.symbol-5 {
+.floating-symbols .symbol:nth-child(4) {
+    top: 25%;
+    left: 7%;
+    animation-delay: -1s;
+}
+
+.floating-symbols .symbol:nth-child(5) {
     bottom: 20%;
     left: 12%;
-    font-size: 1.3rem;
+    animation-delay: -3s;
 }
 
-.symbol-6 {
-    bottom: 14%;
-    right: 20%;
-    font-size: 0.8rem;
-}
-
-.symbol-7 {
-    top: 14%;
-    right: 35%;
-    font-size: 1rem;
-}
-
-.symbol-8 {
-    bottom: 32%;
-    left: 38%;
-    font-size: 0.7rem;
-}
-
-.symbol-9 {
-    top: 65%;
-    left: 5%;
-    font-size: 0.8rem;
-}
-
-.symbol-10 {
-    top: 35%;
-    right: 3%;
-    font-size: 1.4rem;
-}
-
-@keyframes floatSymbol {
-
-    0%,
-    100% {
-        transform: translateY(0);
+@keyframes symbol-float {
+    from {
+        translate: 0 0;
+        rotate: -8deg;
     }
 
-    50% {
-        transform: translateY(-12px);
-    }
-}
-
-
-/* ---------- STORY SECTIONS ---------- */
-
-.story-section {
-    position: relative;
-
-    min-height: 100svh;
-
-    padding: 6rem 1.5rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
-}
-
-.story-text {
-    max-width: 700px;
-}
-
-.story-text h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(3rem, 13vw, 6rem);
-    line-height: 0.9;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-}
-
-.story-text p:not(.eyebrow) {
-    margin-top: 1.5rem;
-    max-width: 550px;
-    font-size: 0.95rem;
-    font-weight: 300;
-}
-
-
-/* ---------- STORY IMAGE ---------- */
-
-.story-image {
-    width: 100%;
-    overflow: hidden;
-}
-
-.story-image img {
-    min-height: 55vh;
-    object-fit: cover;
-}
-
-
-/* ---------- BUTTON ---------- */
-
-.editorial-button {
-    display: inline-block;
-
-    margin-top: 2rem;
-    padding: 0.9rem 1.5rem;
-
-    border: 1px solid currentColor;
-
-    font-size: 0.7rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease;
-}
-
-.editorial-button:hover {
-    background-color: #641f2b;
-    color: #ffffff;
-    border-color: #641f2b;
-}
-
-
-/* ---------- SYMBOLS SECTION ---------- */
-
-.symbols-section {
-    min-height: 100svh;
-
-    padding: 6rem 1.5rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    position: relative;
-    overflow: hidden;
-}
-
-.section-heading {
-    max-width: 700px;
-    position: relative;
-    z-index: 2;
-}
-
-.section-heading h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(3.5rem, 15vw, 7rem);
-    line-height: 0.85;
-    font-weight: 500;
-}
-
-.section-heading p:not(.eyebrow) {
-    margin-top: 1.5rem;
-    max-width: 500px;
-}
-
-.symbols-display {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 2rem;
-
-    margin-top: 4rem;
-
-    text-align: center;
-
-    color: #641f2b;
-}
-
-.symbols-display span {
-    font-size: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.symbols-display span:nth-child(2n) {
-    transform: translateY(1.5rem);
-}
-
-.symbols-display span:hover {
-    transform: scale(1.4);
-}
-
-
-/* ---------- CULTURE PREVIEW ---------- */
-
-.culture-preview {
-    min-height: 100svh;
-
-    padding: 6rem 1.5rem;
-
-    display: flex;
-    align-items: flex-end;
-
-    background:
-        linear-gradient(
-            rgba(23, 20, 18, 0.2),
-            rgba(23, 20, 18, 0.8)
-        ),
-        url("../images/african-culture.jpg");
-
-    background-size: cover;
-    background-position: center;
-}
-
-.culture-preview .story-text {
-    max-width: 650px;
-}
-
-
-/* ---------- FINAL SECTION ---------- */
-
-.final-section {
-    min-height: 75svh;
-
-    padding: 6rem 1.5rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-}
-
-.final-section h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(4rem, 20vw, 9rem);
-    line-height: 0.8;
-    font-weight: 600;
-}
-
-.final-section p:not(.eyebrow) {
-    margin-top: 1.5rem;
-}
-
-
-/* ---------- FOOTER ---------- */
-
-.site-footer {
-    background-color: #171412;
-    color: #ffffff;
-
-    padding: 4rem 1.5rem 2rem;
-
-    text-align: center;
-}
-
-.footer-brand h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 2rem;
-    letter-spacing: 0.15em;
-}
-
-.footer-brand p {
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
-    font-weight: 300;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-
-    margin: 2rem 0;
-}
-
-.footer-links a,
-.video-link a {
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-}
-
-.footer-links a:hover,
-.video-link a:hover {
-    color: #c29a5b;
-}
-
-.copyright {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-
-    font-size: 0.65rem;
-    opacity: 0.6;
-}
-
-
-/* ---------- REDUCED MOTION ---------- */
-
-@media (prefers-reduced-motion: reduce) {
-
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+    to {
+        translate: 0 -14px;
+        rotate: 8deg;
     }
 }
 
 /* ========================================
-   AFRICAN SYMBOL LIBRARY
-======================================== */
+   5. STORY AND CULTURE SECTIONS
+   ======================================== */
+
+.story-section {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    padding-block: var(--section-space);
+}
+
+.story-image {
+    position: relative;
+    min-height: 300px;
+    overflow: hidden;
+    background: var(--color-soft);
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+    transition: transform 300ms ease-out;
+}
+
+.story-text {
+    max-width: 620px;
+    transition: transform 300ms ease-out;
+}
+
+.story-text h2 {
+    margin-top: 0;
+}
+
+.story-text p {
+    color: var(--color-muted);
+}
+
+.culture-preview {
+    position: relative;
+    min-height: 370px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 2rem;
+    background-color: var(--color-dark);
+    background-image:
+        linear-gradient(
+            0deg,
+            rgba(23, 20, 18, 0.9),
+            rgba(23, 20, 18, 0.08)
+        ),
+        url("https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1400&q=80");
+    background-position: center;
+    background-size: cover;
+    color: var(--color-white);
+}
+
+.culture-preview h2,
+.culture-preview h3 {
+    color: var(--color-white);
+}
+
+.culture-preview p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ========================================
+   6. DARK FEATURE SECTION
+   ======================================== */
+
+.dark-section,
+.final-section {
+    padding: var(--section-space) 1.25rem;
+    background: var(--color-dark);
+    color: var(--color-white);
+}
+
+.dark-section h2,
+.dark-section h3,
+.final-section h2,
+.final-section h3 {
+    color: var(--color-white);
+}
+
+.dark-section p,
+.final-section p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.final-section h2 {
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   7. HERITAGE LIBRARY INTRODUCTION
+   ======================================== */
+
+.symbols-section {
+    padding: var(--section-space) 1rem;
+    background: var(--color-cream);
+}
+
+.symbols-section > h2,
+.symbols-section > p {
+    max-width: 750px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.symbols-section > p {
+    margin-bottom: 2rem;
+    color: var(--color-muted);
+}
 
 .symbol-library {
-    width: 100%;
+    width: min(100%, var(--container-width));
+    margin-inline: auto;
 }
 
 .symbol-letter {
-    margin-bottom: 5rem;
+    margin-top: 2.5rem;
 }
 
 .symbol-letter > h3 {
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid rgba(23, 20, 18, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    color: var(--color-burgundy);
+    font-size: 2rem;
+}
 
-    font-family: "Cormorant Garamond", serif;
-    font-size: 3rem;
-    font-weight: 500;
+.symbol-letter > h3::after {
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+    content: "";
 }
 
 .symbol-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
 }
+
+/* ========================================
+   8. COUNTRY CARDS
+   ======================================== */
 
 .symbol-card {
     position: relative;
-    min-height: 210px;
-    padding: 1.25rem;
-
-    border: 1px solid rgba(23, 20, 18, 0.15);
-
     display: flex;
+    min-width: 0;
+    min-height: 250px;
     flex-direction: column;
-    justify-content: flex-end;
-
+    align-items: flex-start;
+    padding: 1.1rem;
     overflow: hidden;
-
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+    box-shadow: 0 4px 14px rgba(23, 20, 18, 0.025);
     transition:
-        transform 0.4s ease,
-        background-color 0.4s ease;
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.symbol-card::before,
+.symbol-card::after {
+    position: absolute;
+    z-index: 0;
+    width: 76px;
+    height: 76px;
+    border: 1px solid rgba(194, 154, 91, 0.45);
+    content: "";
+    pointer-events: none;
+}
+
+.symbol-card::before {
+    top: -40px;
+    right: -35px;
+    rotate: 45deg;
+}
+
+.symbol-card::after {
+    right: -42px;
+    bottom: -45px;
+    border-color: rgba(100, 31, 43, 0.2);
+    border-radius: 50%;
 }
 
 .symbol-card:hover {
-    transform: translateY(-5px);
-    background-color: #ffffff;
+    transform: translateY(-4px);
+    border-color: var(--color-gold);
+    box-shadow: var(--shadow-soft);
 }
 
 .symbol-number {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-
+    position: relative;
+    z-index: 1;
+    align-self: flex-end;
+    color: var(--color-muted);
     font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    opacity: 0.5;
+    letter-spacing: 0.1em;
 }
 
 .culture-symbol {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -65%);
-
-    font-size: 3.5rem;
-    opacity: 0.12;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    margin: 0.35rem 0 0.8rem;
+    border: 1px solid var(--color-gold);
+    border-radius: 50%;
+    background: var(--color-cream);
+    color: var(--color-burgundy);
+    font-size: 1.65rem;
 }
 
 .symbol-card h4 {
-    margin: 0;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 1.5rem;
-    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    margin: 0 0 0.45rem;
+    font-size: 1.05rem;
+    overflow-wrap: anywhere;
 }
 
 .symbol-card p {
-    margin: 0.3rem 0 0;
-
-    font-size: 0.65rem;
-    line-height: 1.5;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-
-    opacity: 0.6;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1rem;
+    color: var(--color-muted);
+    font-size: 0.78rem;
+    line-height: 1.55;
 }
 
 .symbol-more {
-    width: fit-content;
-    margin-top: 1rem;
-    padding: 0;
-
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    padding: 0.5rem 0;
     border: 0;
     background: transparent;
-
-    font-family: "Poppins", sans-serif;
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-
-    cursor: pointer;
+    color: var(--color-burgundy);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: left;
 }
 
 .symbol-more:hover {
-    text-decoration: underline;
+    color: var(--color-gold);
 }
 
+/* ========================================
+   9. SEARCH AND CATEGORY FILTERS
+   ======================================== */
+
+.heritage-controls,
+.symbol-controls {
+    display: grid;
+    gap: 1rem;
+    width: min(100%, 850px);
+    margin: 2rem auto 2.5rem;
+}
+
+.search-box,
+.category-box,
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.search-box label,
+.category-box label,
+.control-group label {
+    color: var(--color-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.search-box input,
+.category-box select,
+.control-group input,
+.control-group select {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.75rem 0.9rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+    background: var(--color-white);
+    color: var(--color-dark);
+}
+
+.search-box input::placeholder,
+.control-group input::placeholder {
+    color: #888176;
+}
+
+.search-box input:focus,
+.category-box select:focus,
+.control-group input:focus,
+.control-group select:focus {
+    border-color: var(--color-burgundy);
+    outline: 2px solid rgba(100, 31, 43, 0.14);
+}
+
+#symbol-count,
+#discovery-status {
+    margin: 0 auto 1.5rem;
+    color: var(--color-muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
 
 /* ========================================
-   MODAL
-======================================== */
+   10. LOADING, EMPTY AND ERROR MESSAGES
+   ======================================== */
+
+.error-message,
+.no-results {
+    padding: 2rem 1.25rem;
+    border: 1px solid var(--color-border);
+    background: var(--color-white);
+    text-align: center;
+}
+
+.error-message h3,
+.no-results h3 {
+    margin-top: 0;
+    color: var(--color-burgundy);
+}
+
+.error-message p,
+.no-results p {
+    color: var(--color-muted);
+}
+
+/* ========================================
+   11. EXPLORE DIALOG
+   ======================================== */
 
 .symbol-modal {
-    width: min(90%, 600px);
+    width: min(90% - 1rem, 560px);
+    max-width: 560px;
+    max-height: 85vh;
     padding: 0;
-    border: 0;
-    background: transparent;
+    overflow: auto;
+    border: 1px solid var(--color-border);
+    background: var(--color-cream);
+    color: var(--color-dark);
+    box-shadow: 0 25px 90px rgba(0, 0, 0, 0.28);
 }
 
 .symbol-modal::backdrop {
-    background: rgba(23, 20, 18, 0.75);
+    background: rgba(23, 20, 18, 0.72);
+    backdrop-filter: blur(4px);
 }
 
 .modal-content {
     position: relative;
-    padding: 3rem 1.5rem;
-
-    background-color: var(--ivory);
-    color: var(--obsidian);
-}
-
-.modal-content h2 {
-    margin: 0.5rem 0;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 3.5rem;
-    line-height: 0.9;
-}
-
-.modal-content h3 {
-    margin: 2rem 0 0.5rem;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 2rem;
-}
-
-.modal-content p {
-    line-height: 1.8;
-}
-
-.modal-type {
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.7rem;
-    opacity: 0.6;
+    padding: 2rem 1.5rem;
 }
 
 .modal-close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-
-    width: 40px;
-    height: 40px;
-
-    border: 1px solid rgba(23, 20, 18, 0.2);
-    background: transparent;
-
-    font-size: 1.5rem;
-    cursor: pointer;
+    top: 0.8rem;
+    right: 0.8rem;
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    background: var(--color-white);
+    color: var(--color-dark);
+    font-size: 1.7rem;
+    line-height: 1;
 }
 
-.primary-navigation.open {
-    display: flex;
+.modal-close:hover {
+    background: var(--color-burgundy);
+    color: var(--color-white);
 }
 
+.modal-content .eyebrow {
+    padding-right: 2.5rem;
+}
 
-/* ==========================================
-   AFRIWAY — DISCOVERY PAGE
-   ========================================== */
+.modal-content h2 {
+    margin: 0 0 0.6rem;
+    color: var(--color-burgundy);
+    overflow-wrap: anywhere;
+}
+
+.modal-type {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid var(--color-border);
+    color: var(--color-muted);
+    font-size: 0.75rem;
+}
+
+.modal-content h3 {
+    margin-top: 1.7rem;
+}
+
+.modal-content p:last-child {
+    color: var(--color-muted);
+}
+
+/* ========================================
+   12. DISCOVER PAGE
+   ======================================== */
 
 .intro-section {
-    padding: 5rem 6vw 3rem;
+    padding: 4rem 1.25rem;
+    background: var(--color-cream);
     text-align: center;
 }
 
 .intro-section h1 {
-    max-width: 1000px;
-    margin: 1.5rem auto;
-    font-family: "Poppins", sans-serif;
-    font-size: clamp(2.5rem, 7vw, 5.5rem);
-    line-height: 1.05;
-    overflow-wrap: break-word;
+    margin-top: 0;
+    color: var(--color-burgundy);
 }
 
-.intro-section > p:last-child {
-    max-width: 760px;
-    margin: 1.5rem auto 0;
-    line-height: 1.8;
+.intro-section p {
+    max-width: 720px;
+    margin-inline: auto;
+    color: var(--color-muted);
 }
 
 .symbol-section {
-    padding: 3rem 6vw 5rem;
+    padding: var(--section-space) 1rem;
 }
 
-.symbol-section .section-heading {
+.symbol-section > h2,
+.symbol-section > p {
+    max-width: 750px;
+    margin-inline: auto;
     text-align: center;
-    margin: 0 auto 3rem;
 }
 
-.symbol-section .section-heading h2 {
-    font-family: "Cormorant Garamond", serif;
-    font-size: clamp(3rem, 8vw, 5.5rem);
-    font-weight: 400;
-    line-height: 1;
-    margin: 1rem 0;
+.symbol-section > p {
+    color: var(--color-muted);
 }
 
-.symbol-section .section-heading > p:last-child {
-    margin-top: 1.5rem;
+.symbol-section .symbol-controls {
+    margin-top: 2rem;
 }
 
-.symbol-controls {
-    width: 100%;
-    max-width: 850px;
-    margin: 0 auto 2rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+#symbol-library[aria-busy="true"] {
+    opacity: 0.65;
 }
 
-.control-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    min-width: 0;
+/* ========================================
+   13. FOOTER
+   ======================================== */
+
+.site-footer,
+footer {
+    padding: 2.5rem 1.25rem;
+    background: var(--color-dark);
+    color: var(--color-white);
+    text-align: center;
 }
 
-.control-group label {
+.site-footer p,
+footer p {
+    margin: 0.35rem 0;
+    color: rgba(255, 255, 255, 0.72);
     font-size: 0.8rem;
-    font-weight: 500;
 }
 
-.control-group input,
-.control-group select,
-.control-group textarea {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0.9rem 1rem;
-    border: 1px solid #d4c2ac;
-    border-radius: 2px;
-    background: #fffdf9;
-    color: #25211f;
-    font: inherit;
-    font-size: 0.95rem;
+.site-footer a,
+footer a {
+    color: #e1bf85;
 }
 
-.control-group textarea {
-    min-height: 140px;
-    resize: vertical;
+.site-footer a:hover,
+footer a:hover {
+    text-decoration: underline;
 }
 
-.control-group input:focus,
-.control-group select:focus,
-.control-group textarea:focus {
-    outline: 2px solid #6b1f2b;
-    outline-offset: 2px;
+/* ========================================
+   14. SMALL-SCREEN ADJUSTMENTS
+   ======================================== */
+
+@media (max-width: 360px) {
+    .site-header {
+        padding-inline: 0.8rem;
+    }
+
+    .logo,
+    .site-logo {
+        font-size: 1.5rem;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding-inline: 1rem;
+    }
+
+    .symbol-grid {
+        gap: 0.6rem;
+    }
+
+    .symbol-card {
+        min-height: 245px;
+        padding: 0.8rem;
+    }
+
+    .symbol-card h4 {
+        font-size: 0.95rem;
+    }
 }
 
-.button-dark {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    padding: 1rem 1.5rem;
-    border: 1px solid #641f2b;
-    background: #641f2b;
-    color: white;
-    font: inherit;
-    cursor: pointer;
-}
+/* ========================================
+   15. ACCESSIBILITY
+   ======================================== */
 
-.button-dark:hover {
-    background: #491620;
-}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 
-.symbol-section > .eyebrow {
-    max-width: 850px;
-    margin: 2rem auto 0;
-    line-height: 1.8;
-}
-
-#discovery-status {
-    max-width: 850px;
-    margin: 2rem auto;
-    line-height: 1.8;
-}
-
-#discovery-status[hidden],
-.symbol-controls[hidden] {
-    display: none;
+    .story-image img,
+    .story-text,
+    .symbol-card,
+    .button {
+        transform: none !important;
+    }
 }

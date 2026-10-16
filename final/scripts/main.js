@@ -1,8 +1,18 @@
-// ========================================
-// AFRIWAY - MAIN JAVASCRIPT
-// ========================================
+
+/* ========================================
+   AFRIWAY — MAIN JAVASCRIPT
+   Author: Chelsea Afriyie Opoku
+   ======================================== */
+
+"use strict";
 
 let allSymbols = [];
+let activeSymbols = [];
+let modalElement = null;
+
+/* ========================================
+   INITIALIZE THE WEBSITE
+   ======================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
     initializeScrollEffects();
@@ -10,75 +20,126 @@ document.addEventListener("DOMContentLoaded", () => {
     loadSymbols();
 });
 
-
-// ========================================
-// CINEMATIC SCROLL EFFECT
-// ========================================
+/* ========================================
+   SCROLL EFFECTS
+   ======================================== */
 
 function initializeScrollEffects() {
     const sections = document.querySelectorAll(".story-section");
 
-    window.addEventListener("scroll", () => {
-        const scrollPosition = window.scrollY;
+    if (!sections.length) {
+        return;
+    }
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (reducedMotion) {
+        return;
+    }
+
+    let ticking = false;
+
+    function updateSections() {
         const windowHeight = window.innerHeight;
 
         sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-
+            const rectangle = section.getBoundingClientRect();
             const distanceFromCenter =
-                scrollPosition + windowHeight / 2 - sectionTop;
+                windowHeight / 2 -
+                (rectangle.top + rectangle.height / 2);
 
-            const progress = distanceFromCenter / sectionHeight;
-            const limitedProgress = Math.max(-1, Math.min(1, progress));
+            const progress = Math.max(
+                -1,
+                Math.min(1, distanceFromCenter / windowHeight)
+            );
 
             const image = section.querySelector(".story-image img");
             const text = section.querySelector(".story-text");
 
             if (image) {
-                const scale = 1.05 + Math.abs(limitedProgress) * 0.08;
-                const movement = limitedProgress * 35;
+                const scale = 1.04 + Math.abs(progress) * 0.04;
+                const movement = progress * 15;
 
                 image.style.transform =
                     `scale(${scale}) translateY(${movement}px)`;
             }
 
             if (text) {
-                const movement = limitedProgress * -20;
-                text.style.transform = `translateY(${movement}px)`;
+                text.style.transform =
+                    `translateY(${progress * -10}px)`;
             }
         });
-    });
+
+        ticking = false;
+    }
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateSections);
+                ticking = true;
+            }
+        },
+        { passive: true }
+    );
+
+    updateSections();
 }
 
-
-// ========================================
-// FLOATING SYMBOL MOVEMENT
-// ========================================
+/* ========================================
+   FLOATING AFRICAN-INSPIRED SYMBOLS
+   ======================================== */
 
 function initializeFloatingSymbols() {
     const symbols = document.querySelectorAll(
         ".floating-symbols .symbol"
     );
 
-    window.addEventListener("scroll", () => {
+    if (!symbols.length) {
+        return;
+    }
+
+    const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (reducedMotion) {
+        return;
+    }
+
+    let ticking = false;
+
+    function updateSymbols() {
         const scrollPosition = window.scrollY;
 
         symbols.forEach((symbol, index) => {
-            const speed = 0.02 + (index % 5) * 0.01;
+            const speed = 0.015 + (index % 5) * 0.008;
             const movement = scrollPosition * speed;
 
             symbol.style.transform = `translateY(${movement}px)`;
         });
-    });
+
+        ticking = false;
+    }
+
+    window.addEventListener(
+        "scroll",
+        () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateSymbols);
+                ticking = true;
+            }
+        },
+        { passive: true }
+    );
 }
 
-
-// ========================================
-// LOAD AFRICAN COUNTRIES AND SYMBOLS
-// FETCH API + ASYNC/AWAIT
-// ========================================
-
+/* ========================================
+   LOAD THE AFRICAN HERITAGE DATA
+   ======================================== */
 
 async function loadSymbols() {
     const library = document.querySelector("#symbol-library");
@@ -87,50 +148,96 @@ async function loadSymbols() {
         return;
     }
 
+    library.setAttribute("aria-busy", "true");
+
     try {
         const response = await fetch("data/symbols.json");
 
         if (!response.ok) {
-            throw new Error(`Unable to load symbols: ${response.status}`);
+            throw new Error(
+                `Unable to load symbols: HTTP ${response.status}`
+            );
         }
 
         const data = await response.json();
 
         if (!Array.isArray(data)) {
-            throw new Error("The symbols data must be an array.");
+            throw new Error(
+                "The symbols data must be an array."
+            );
         }
 
-        // Store all countries and sort them alphabetically.
-        allSymbols = data.sort((a, b) =>
-            (a.country || "").localeCompare(b.country || "")
+        allSymbols = data
+            .filter((symbol) => symbol && symbol.country)
+            .sort((a, b) =>
+                a.country.localeCompare(b.country)
+            );
+
+        activeSymbols = [...allSymbols];
+
+        displaySymbols(activeSymbols);
+        initializeHeritageFilters();
+        updateCountryCount(activeSymbols.length);
+
+    } catch (error) {
+        console.error(
+            "AfriWay heritage library error:",
+            error
         );
 
-        // Display all countries.
-        displaySymbols(allSymbols);
-
-        // Activate search and category filters.
-        initializeHeritageFilters();
-
-        // Update the country count if the element exists.
-        const count = document.querySelector("#symbol-count");
-        if (count) {
-            count.textContent = `${allSymbols.length} countries in the collection`;
-        }
-    } catch (error) {
-        console.error("Error loading African symbols:", error);
-
         library.innerHTML = `
-            <p class="error-message">
-                We couldn't load the African heritage library.
-                Please check your connection and try again.
-            </p>
+            <div class="error-message" role="alert">
+                <h3>Our heritage library could not load.</h3>
+                <p>
+                    Please check your connection and try again.
+                    If you are opening this page directly from your
+                    computer, run it through a local development server.
+                </p>
+                <button
+                    class="button"
+                    id="retry-symbols"
+                    type="button"
+                >
+                    Try again
+                </button>
+            </div>
         `;
+
+        const retryButton = document.querySelector("#retry-symbols");
+
+        if (retryButton) {
+            retryButton.addEventListener("click", loadSymbols);
+        }
+
+    } finally {
+        library.setAttribute("aria-busy", "false");
     }
 }
 
-// ========================================
-// DISPLAY COUNTRY CARDS ALPHABETICALLY
-// ========================================
+/* ========================================
+   UPDATE THE COUNTRY COUNT
+   ======================================== */
+
+function updateCountryCount(count) {
+    const countElement = document.querySelector("#symbol-count");
+    const statusElement = document.querySelector("#discovery-status");
+
+    const message = `${count} ${
+        count === 1 ? "country" : "countries"
+    } in the collection`;
+
+    if (countElement) {
+        countElement.textContent = message;
+    }
+
+    if (statusElement) {
+        statusElement.textContent = message;
+    }
+}
+
+/* ========================================
+   DISPLAY COUNTRY CARDS
+   ======================================== */
 
 function displaySymbols(symbols) {
     const library = document.querySelector("#symbol-library");
@@ -143,10 +250,15 @@ function displaySymbols(symbols) {
 
     if (symbols.length === 0) {
         library.innerHTML = `
-            <p class="no-results">
-                No countries found. Try another search or category.
-            </p>
+            <div class="no-results">
+                <h3>No countries found</h3>
+                <p>
+                    Try another search term or choose a different category.
+                </p>
+            </div>
         `;
+
+        updateCountryCount(0);
         return;
     }
 
@@ -156,55 +268,77 @@ function displaySymbols(symbols) {
         .sort()
         .forEach((letter) => {
             const letterSection = document.createElement("section");
-            letterSection.classList.add("symbol-letter");
+            letterSection.className = "symbol-letter";
+            letterSection.setAttribute(
+                "aria-label",
+                `Countries beginning with ${letter}`
+            );
 
-            letterSection.innerHTML = `
-                <h3>${letter}</h3>
-                <div class="symbol-grid"></div>
-            `;
+            const heading = document.createElement("h3");
+            heading.textContent = letter;
 
-            const grid = letterSection.querySelector(".symbol-grid");
+            const grid = document.createElement("div");
+            grid.className = "symbol-grid";
 
             groupedSymbols[letter].forEach((symbol, index) => {
+                const country = symbol.country || "Unknown country";
                 const card = document.createElement("article");
-                card.classList.add("symbol-card");
+
+                card.className = "symbol-card";
 
                 const number = String(index + 1).padStart(2, "0");
 
-                card.innerHTML = `
-                    <span class="symbol-number">${number}</span>
+                const numberElement = document.createElement("span");
+                numberElement.className = "symbol-number";
+                numberElement.textContent = number;
+                numberElement.setAttribute("aria-hidden", "true");
 
-                    <div class="culture-symbol" aria-hidden="true">
-                        ${getSymbolShape(index)}
-                    </div>
+                const decoration = document.createElement("div");
+                decoration.className = "culture-symbol";
+                decoration.setAttribute("aria-hidden", "true");
+                decoration.textContent = getSymbolShape(index);
 
-                    <h4>${escapeHTML(symbol.country || "Unknown country")}</h4>
+                const title = document.createElement("h4");
+                title.textContent = country;
 
-                    <p>${escapeHTML(symbol.tradition || "Cultural tradition")}</p>
+                const tradition = document.createElement("p");
+                tradition.textContent =
+                    symbol.tradition || "Cultural heritage";
 
-                    <button
-                        class="symbol-more"
-                        type="button"
-                        data-country="${escapeHTML(symbol.country || "")}"
-                        aria-label="Learn more about ${escapeHTML(symbol.country || "this country")}"
-                    >
-                        EXPLORE →
-                    </button>
-                `;
+                const exploreButton = document.createElement("button");
+                exploreButton.className = "symbol-more";
+                exploreButton.type = "button";
+                exploreButton.textContent = "EXPLORE →";
+                exploreButton.setAttribute(
+                    "aria-label",
+                    `Explore the cultural heritage of ${country}`
+                );
+
+                exploreButton.addEventListener("click", () => {
+                    openSymbolModal(symbol);
+                });
+
+                card.append(
+                    numberElement,
+                    decoration,
+                    title,
+                    tradition,
+                    exploreButton
+                );
 
                 grid.appendChild(card);
             });
 
+            letterSection.append(heading, grid);
             library.appendChild(letterSection);
         });
 
-    addSymbolModalEvents(symbols);
+    updateCountryCount(symbols.length);
 }
 
-
-// ========================================
-// GROUP COUNTRIES BY FIRST LETTER
-// ========================================
+/* ========================================
+   GROUP COUNTRIES ALPHABETICALLY
+   ======================================== */
 
 function groupSymbolsByLetter(symbols) {
     return symbols.reduce((groups, symbol) => {
@@ -221,51 +355,64 @@ function groupSymbolsByLetter(symbols) {
     }, {});
 }
 
-
-// ========================================
-// DECORATIVE SYMBOL SHAPES
-// ========================================
+/* ========================================
+   CSS-FRIENDLY DECORATIVE SYMBOLS
+   ======================================== */
 
 function getSymbolShape(index) {
-    const shapes = ["✦", "◇", "◆", "✧", "◈"];
+    const shapes = [
+        "✦",
+        "◇",
+        "◆",
+        "✧",
+        "◈",
+        "✺",
+        "⬡",
+        "✳",
+        "❋",
+        "✣"
+    ];
 
     return shapes[index % shapes.length];
 }
 
-
-// ========================================
-// COUNTRY SEARCH AND CATEGORY FILTER
-// ========================================
+/* ========================================
+   SEARCH AND CATEGORY FILTERS
+   ======================================== */
 
 function initializeHeritageFilters() {
     const searchInput = document.querySelector("#symbol-search");
     const categorySelect = document.querySelector("#symbol-type");
 
     if (!searchInput || !categorySelect) {
-        console.error(
-            "AfriWay: Check that #symbol-search and #symbol-type exist in index.html."
+        console.warn(
+            "AfriWay: Search controls were not found. " +
+            "Check for #symbol-search and #symbol-type in index.html."
         );
         return;
     }
 
     function filterCountries() {
-        const searchTerm = searchInput.value.trim().toLowerCase();
-        const selectedCategory = categorySelect.value.trim().toLowerCase();
+        const searchTerm = searchInput.value
+            .trim()
+            .toLowerCase();
 
-        const filteredSymbols = allSymbols.filter((symbol) => {
+        const selectedCategory = categorySelect.value
+            .trim()
+            .toLowerCase();
+
+        activeSymbols = allSymbols.filter((symbol) => {
             const country = (symbol.country || "").toLowerCase();
             const tradition = (symbol.tradition || "").toLowerCase();
             const type = (symbol.type || "").toLowerCase();
             const meaning = (symbol.meaning || "").toLowerCase();
 
-            // Search across country name and cultural information.
             const matchesSearch =
                 country.includes(searchTerm) ||
                 tradition.includes(searchTerm) ||
                 type.includes(searchTerm) ||
                 meaning.includes(searchTerm);
 
-            // Match the selected category.
             const matchesCategory =
                 selectedCategory === "" ||
                 selectedCategory === "all" ||
@@ -276,119 +423,99 @@ function initializeHeritageFilters() {
             return matchesSearch && matchesCategory;
         });
 
-        displaySymbols(filteredSymbols);
+        displaySymbols(activeSymbols);
     }
 
     searchInput.addEventListener("input", filterCountries);
     categorySelect.addEventListener("change", filterCountries);
 }
 
-
-// ========================================
-// COUNTRY EXPLORE BUTTON EVENTS
-// ========================================
-
-function addSymbolModalEvents(symbols) {
-    const buttons = document.querySelectorAll(".symbol-more");
-
-    buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const country = button.dataset.country;
-
-            const selectedSymbol = symbols.find(
-                (symbol) => symbol.country === country
-            );
-
-            if (selectedSymbol) {
-                openSymbolModal(selectedSymbol);
-            }
-        });
-    });
-}
-
-
-// ========================================
-// CREATE ACCESSIBLE COUNTRY MODAL
-// ========================================
+/* ========================================
+   COUNTRY EXPLORE DIALOG
+   ======================================== */
 
 function openSymbolModal(symbol) {
-    const existingModal = document.querySelector(".symbol-modal");
-
-    if (existingModal) {
-        existingModal.remove();
+    if (modalElement && modalElement.isConnected) {
+        modalElement.close();
+        modalElement.remove();
     }
+
+    const country = symbol.country || "African heritage";
 
     const modal = document.createElement("dialog");
     modal.className = "symbol-modal";
+    modal.setAttribute(
+        "aria-label",
+        `${country} cultural heritage`
+    );
 
-    modal.innerHTML = `
-        <div class="modal-content">
-            <button
-                class="modal-close"
-                type="button"
-                aria-label="Close ${escapeHTML(symbol.country)} information"
-            >
-                ×
-            </button>
+    const content = document.createElement("div");
+    content.className = "modal-content";
 
-            <p class="eyebrow">AFRICAN HERITAGE</p>
+    const closeButton = document.createElement("button");
+    closeButton.className = "modal-close";
+    closeButton.type = "button";
+    closeButton.textContent = "×";
+    closeButton.setAttribute("aria-label", "Close dialog");
 
-            <h2>${escapeHTML(symbol.country || "")}</h2>
+    const eyebrow = document.createElement("p");
+    eyebrow.className = "eyebrow";
+    eyebrow.textContent = "AFRICAN HERITAGE";
 
-            <p class="modal-type">${escapeHTML(symbol.type || "Cultural heritage")}</p>
+    const heading = document.createElement("h2");
+    heading.textContent = country;
 
-            <h3>${escapeHTML(symbol.tradition || "")}</h3>
+    const type = document.createElement("p");
+    type.className = "modal-type";
+    type.textContent = symbol.type || "Cultural heritage";
 
-            <p>${escapeHTML(symbol.meaning || "More cultural information coming soon.")}</p>
-        </div>
-    `;
+    const traditionHeading = document.createElement("h3");
+    traditionHeading.textContent =
+        symbol.tradition || "Cultural tradition";
 
+    const meaning = document.createElement("p");
+    meaning.textContent =
+        symbol.meaning ||
+        "More information about this tradition is coming soon.";
+
+    content.append(
+        closeButton,
+        eyebrow,
+        heading,
+        type,
+        traditionHeading,
+        meaning
+    );
+
+    modal.appendChild(content);
     document.body.appendChild(modal);
 
-    const closeButton = modal.querySelector(".modal-close");
+    modalElement = modal;
 
     closeButton.addEventListener("click", () => {
         modal.close();
     });
 
     modal.addEventListener("click", (event) => {
-        const content = modal.querySelector(".modal-content");
-        const rectangle = content.getBoundingClientRect();
-
-        const clickedInside =
-            event.clientX >= rectangle.left &&
-            event.clientX <= rectangle.right &&
-            event.clientY >= rectangle.top &&
-            event.clientY <= rectangle.bottom;
-
-        if (!clickedInside) {
+        if (event.target === modal) {
             modal.close();
         }
     });
 
     modal.addEventListener("close", () => {
         modal.remove();
+
+        if (modalElement === modal) {
+            modalElement = null;
+        }
+    });
+
+    modal.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            modal.close();
+        }
     });
 
     modal.showModal();
     closeButton.focus();
-}
-
-
-// ========================================
-// ESCAPE TEXT BEFORE ADDING IT TO HTML
-// ========================================
-
-function escapeHTML(value) {
-    return String(value).replace(/[&<>"']/g, (character) => {
-        const characters = {
-            "&": "&amp;",
-            "<": "&lt;",
-            ">": "&gt;",
-            '"': "&quot;",
-            "'": "&#39;"
-        };
-
-        return characters[character];
-    });
 }

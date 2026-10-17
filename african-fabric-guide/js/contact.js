@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 const contactForm = document.querySelector("#contact-form");
 
 if (contactForm) {
